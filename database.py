@@ -1,12 +1,24 @@
 import pandas as pd
 import datetime
-#вывод за неделю не работает,пофикшу позже
+
+from openpyxl.chart.series import attribute_mapping
+
+
+
 result = pd.read_csv("telemi_events.csv")
 eventtype=result['EventType'].tolist()
 time=result['Timestamp'].tolist()
+AtmID=result['DeviceID'].tolist()
+value=result['Value'].tolist()
 firsttime=list(map(int,time[0][0:10].split('-')))
 startdate=datetime.date(firsttime[0],firsttime[1],firsttime[2])
-print(startdate)
+errorslist=[]
+
+# for x in value:
+#     if ('ОШИБКА' or 'НЕ РАБОТАЕТ') in x.upper():
+#         errorslist.append(x)
+# print(errorslist)
+
 def weekindexcount(index0,list, date0):
     k=0
     a=list[index0:][0][8:10]
@@ -39,15 +51,14 @@ print(last)
 #print(eventtype[6,8])
 k=0
 while k<=lastcount:
-    print("Ошибки за неделю")
+    print("------------\n-----------\n----------Ошибки за неделю---------------\n----------------------\n---------------------------")
     stopcount=weekindexcount(k,time, startdate.weekday())
 
-    for item in eventtype:
+    for item in eventtype[k: stopcount]:
         if k>=stopcount:
             break
         if "ОШИБКА" in item.upper():
-            print(eventtype[k], time[k], k)
+            print(eventtype[k], time[k], AtmID[k], k,)
             firsttime = list(map(int, time[k][0:10].split('-')))
         k+=1
     startdate=datetime.date(firsttime[0],firsttime[1],firsttime[2])
-    k=weekindexcount(k,time, startdate.weekday())
