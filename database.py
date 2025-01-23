@@ -1,18 +1,20 @@
 import pandas as pd
 import datetime
+import json
 
 from openpyxl.chart.series import attribute_mapping
 
 
 
 result = pd.read_csv("telemi_events.csv")
-eventtype=result['EventType'].tolist()
+event_type=result['EventType'].tolist()
 time=result['Timestamp'].tolist()
 AtmID=result['DeviceID'].tolist()
 value=result['Value'].tolist()
-firsttime=list(map(int,time[0][0:10].split('-')))
-startdate=datetime.date(firsttime[0],firsttime[1],firsttime[2])
-errorslist=[]
+first_time=list(map(int,time[0][0:10].split('-')))
+start_date=datetime.date(first_time[0],first_time[1],first_time[2])
+errors_list=[]
+data={''}
 
 # for x in value:
 #     if ('ОШИБКА' or 'НЕ РАБОТАЕТ') in x.upper():
@@ -38,27 +40,33 @@ k=0
 
 
 
-print(weekindexcount(338,time, int(startdate.weekday())))
+print(weekindexcount(338,time, int(start_date.weekday())))
 last=0
 lastcount=0
-for i in eventtype:
+errorlst=[]
+for i in event_type:
 
     if "ОШИБКА" in i.upper():
         last=lastcount
+        errorlst.append(i)
     lastcount+=1
-print(last)
+print(set(errorlst))
 
-#print(eventtype[6,8])
 k=0
-while k<=lastcount:
-    print("------------\n-----------\n----------Ошибки за неделю---------------\n----------------------\n---------------------------")
-    stopcount=weekindexcount(k,time, startdate.weekday())
-
-    for item in eventtype[k: stopcount]:
+week=1
+while k<lastcount:
+    print("------   ------\n-----------\n----------Ошибки за неделю---------------\n----------------------\n---------------------------")
+    stopcount=weekindexcount(k,time, start_date.weekday())
+    weeklist=[]
+    for item in event_type[k: stopcount]:
         if k>=stopcount:
             break
         if "ОШИБКА" in item.upper():
-            print(eventtype[k], time[k], AtmID[k], k,)
+            #print(event_type[k], time[k], AtmID[k], k,)
+            with open('bankomat_data.json', 'a', encoding='utf-8') as file:
+                file.write(json.dumps({('неделя '+str(week)):({AtmID[k]: event_type[k]})}, indent=4, ensure_ascii=False))
+            print({AtmID[k]:event_type[k]})
             firsttime = list(map(int, time[k][0:10].split('-')))
         k+=1
-    startdate=datetime.date(firsttime[0],firsttime[1],firsttime[2])
+    start_date=datetime.date(firsttime[0],firsttime[1],firsttime[2])
+    week+=1
