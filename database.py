@@ -57,16 +57,18 @@ week=1
 while k<lastcount:
     print("------   ------\n-----------\n----------Ошибки за неделю---------------\n----------------------\n---------------------------")
     stopcount=weekindexcount(k,time, start_date.weekday())
-    weeklist=[]
+    weekdata= {}
     for item in event_type[k: stopcount]:
         if k>=stopcount:
             break
         if "ОШИБКА" in item.upper():
             #print(event_type[k], time[k], AtmID[k], k,)
-            with open('bankomat_data.json', 'a', encoding='utf-8') as file:
-                file.write(json.dumps({('неделя '+str(week)):({AtmID[k]: event_type[k]})}, indent=4, ensure_ascii=False))
+
             print({AtmID[k]:event_type[k]})
+            weekdata[AtmID[k]]=event_type[k]
             firsttime = list(map(int, time[k][0:10].split('-')))
         k+=1
+    with open('bankomat_data.json', 'a', encoding='utf-8') as file:
+        file.write(json.dumps({('неделя '+str(week)):weekdata}, indent=4, ensure_ascii=False))
     start_date=datetime.date(firsttime[0],firsttime[1],firsttime[2])
     week+=1
