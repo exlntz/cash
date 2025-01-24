@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Цвет фона страницы */
+}
+
+.container {
+    background-color: #d0e8d0; /* Зеленый пастельный цвет */
+    border-radius: 15px; /* Закругленные углы */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для контейнера */
+    text-align: center; /* Центрирование текста */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение полей формы */
+}
+
+label {
+    margin: 10px 0 5px; /* Отступы между меткой и полем ввода */
+}
+
+input {
+    padding: 10px; /* Отступы внутри полей ввода */
+    margin-bottom: 15px; /* Отступ между полями ввода */
+    border: 1px solid #ccc; /* Граница для поля ввода */
+    border-radius: 5px; /* Закругленные углы полей ввода */
+}
