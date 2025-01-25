@@ -18,16 +18,11 @@ def maps_def():
     return render_template('maps/maps.html')
 
 
-@app.route('/registration')
-def registration_def():
-    return render_template('registration/registration.html')
 
-#надо сделать при условии что логин и пароль админа
-#если логин и пароль админа то на главной странице нужно сделать кнопку админ панель
-#и уже потом перекидывать на admin.html
 @app.route('/admin')
 def admin_def():
     return render_template('admin/admin.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

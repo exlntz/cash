@@ -1,13 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>admin panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить механика</title>
+    <style>
+        #mechanicForm {
+            display: none; /* Скрываем форму по умолчанию */
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
-<h1>admin panel</h1>
+
+    <button id="addMechanicButton">Добавить механика</button>
+
+    <div id="mechanicForm">
+        <h3>Информация о механике</h3>
+        <form id="dataForm">
+            <label for="name">Имя:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="experience">Опыт (лет):</label><br>
+            <input type="number" id="experience" name="experience" required><br><br>
+
+            <label for="specialization">Специализация:</label><br>
+            <input type="text" id="specialization" name="specialization" required><br><br>
+
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <script>
+        const addMechanicButton = document.getElementById('addMechanicButton');
+        const mechanicForm = document.getElementById('mechanicForm');
+
+        addMechanicButton.addEventListener('click', () => {
+            if (mechanicForm.style.display === 'none') {
+                mechanicForm.style.display = 'block'; // Показываем форму
+                addMechanicButton.textContent = 'Скрыть форму'; // Меняем текст кнопки
+            } else {
+                mechanicForm.style.display = 'none'; // Скрываем форму
+                addMechanicButton.textContent = 'Добавить механика'; // Возвращаем текст кнопки
+            }
+        });
+    </script>
+
 </body>
 </html>

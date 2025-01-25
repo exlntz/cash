@@ -74,7 +74,7 @@ for i in event_type:
 
 k=0
 week=1
-with open('jsons/bankomat_data.json', 'w', encoding='utf-8') as file:
+with open('jsons/atm_errors_data.json', 'w', encoding='utf-8') as file:
     file.write('')
 while k<lastcount:
     stopcount=weekindexcount(k,time, start_date.weekday())
@@ -86,7 +86,7 @@ while k<lastcount:
             weekdata[AtmID[k]]=event_type[k]
             firsttime = list(map(int, time[k][0:10].split('-')))
         k+=1
-    with open('jsons/bankomat_data.json', 'a', encoding='utf-8') as file:
+    with open('jsons/atm_errors_data.json', 'a', encoding='utf-8') as file:
         file.write(json.dumps({('неделя '+str(week)):weekdata}, indent=4, ensure_ascii=False))
     start_date=datetime.date(firsttime[0],firsttime[1],firsttime[2])
     week+=1
@@ -120,5 +120,5 @@ for event in value:
 repair_needs['critical_errors']=critical_errorsLIST
 repair_needs['errors']=errorsLIST
 repair_needs['non_errors']=non_errorsLIST
-with open('jsons/atmdata2.json', 'w', encoding='utf-8') as file:
+with open('jsons/atm_data.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(repair_needs, indent=4, ensure_ascii=False))
