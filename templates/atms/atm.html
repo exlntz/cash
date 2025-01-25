@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибки банкоматов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="atmcss.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu-item"><a href="gmaps.html">Google maps</a></div>
+        <div class="menu-item"><a href="vkmaps.html">VK maps</a></div>
+        <div class="menu-item"><a href="employers.html">Сотрудники</a></div>
+    </div>
+
+    <div class="content">
+        <div class="filter">
+            <button class="filter-btn" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="errors">Ошибки</button>
+            <button class="filter-btn" data-filter="critical">Критические ошибки</button>
+        </div>
+        
+        <div class="output-container">
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <script src="atmscripts.js"></script>
+</body>
+</html>

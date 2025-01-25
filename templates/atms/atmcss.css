@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px; /* Увеличено для всего интерфейса */
+}
+
+.sidebar {
+    background-color: #b2e0b2; /* Зеленый пастельный цвет */
+    border-radius: 10px;
+    padding: 20px;
+    width: auto; /* Ширина подстраивается под содержимое */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menu-item {
+    margin: 10px 0;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em; /* Увеличен размер шрифта */
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.filter {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1.2em; /* Увеличен размер шрифта */
+}
+
+.output-container {
+    max-height: 400px; /* Максимальная высота для прокрутки */
+    overflow-y: auto; /* Прокрутка по вертикали */
+    border: 1px solid #ccc; /* Обводка контейнера */
+    border-radius: 5px; /* Закругленные углы обводки */
+    padding: 10px; /* Отступ внутри контейнера */
+}
+
+/* Увеличение элементов вывода */
+.output-container div {
+    margin: 5px 0; /* Отступ для строк */
+    font-size: 1.2em; /* Увеличен размер шрифта для вывода банкоматов */
+}
