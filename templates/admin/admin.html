@@ -3,51 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Добавить механика</title>
+    <title>Администрирование</title>
     <style>
-        #mechanicForm {
+        #form-container {
             display: none; /* Скрываем форму по умолчанию */
             margin-top: 20px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 300px;
         }
     </style>
 </head>
 <body>
+    <h1>Администрирование</h1>
+    <button id="show-form-button">Добавить механика</button>
 
-    <button id="addMechanicButton">Добавить механика</button>
-
-    <div id="mechanicForm">
-        <h3>Информация о механике</h3>
-        <form id="dataForm">
-            <label for="name">Имя:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="experience">Опыт (лет):</label><br>
-            <input type="number" id="experience" name="experience" required><br><br>
-
-            <label for="specialization">Специализация:</label><br>
-            <input type="text" id="specialization" name="specialization" required><br><br>
-
-            <input type="submit" value="Отправить">
+    <div id="form-container">
+        <form action="/admin/submit/mechanic" method="post">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="age" required>
+            <br><br>
+            <button type="submit">Добавить</button>
         </form>
     </div>
 
     <script>
-        const addMechanicButton = document.getElementById('addMechanicButton');
-        const mechanicForm = document.getElementById('mechanicForm');
+        // Получаем элементы кнопки и контейнера формы
+        const showFormButton = document.getElementById('show-form-button');
+        const formContainer = document.getElementById('form-container');
 
-        addMechanicButton.addEventListener('click', () => {
-            if (mechanicForm.style.display === 'none') {
-                mechanicForm.style.display = 'block'; // Показываем форму
-                addMechanicButton.textContent = 'Скрыть форму'; // Меняем текст кнопки
+        // Добавляем обработчик события для кнопки
+        showFormButton.addEventListener('click', function() {
+            // Переключаем видимость формы
+            if (formContainer.style.display === 'none') {
+                formContainer.style.display = 'block';
+                showFormButton.textContent = 'Вернуться назад'; // Меняем текст кнопки
             } else {
-                mechanicForm.style.display = 'none'; // Скрываем форму
-                addMechanicButton.textContent = 'Добавить механика'; // Возвращаем текст кнопки
+                formContainer.style.display = 'none';
+                showFormButton.textContent = 'Добавить механика'; // Меняем текст кнопки обратно
             }
         });
     </script>
-
 </body>
 </html>

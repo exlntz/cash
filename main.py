@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
+import csv
+
 
 app = Flask(__name__)
 
@@ -22,6 +24,16 @@ def maps_def():
 @app.route('/admin')
 def admin_def():
     return render_template('admin/admin.html')
+
+
+@app.route('/admin/submit/mechanic', methods=['POST'])
+def submit():
+    # Получаем слово из формы
+    name = request.form.get('name')
+    age = request.form.get('age')
+    with open('csvfiles/mechanics.csv','a',encoding='utf-8',newline='') as fm:
+        csv.writer(fm).writerow([name,age])
+    return f'Механик успешно добавлен!'
 
 
 if __name__ == '__main__':
