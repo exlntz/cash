@@ -33,6 +33,8 @@ def weekindexcount(index0,list, date0):
     return k
 k=0
 
+
+
 # for s in time:
 #     print(s, s[8:10],k)
 #     k+=1
@@ -43,6 +45,8 @@ for status in all_value:
     if str(status).isdigit()==0:
         if len(str(status).split())>1:
             all_errors.append(status)
+
+
 all_errors.sort()
 non_critical_errors=[]
 critical_errors=[]
@@ -50,14 +54,17 @@ non_critical_errors.extend(all_errors[20:23])
 non_critical_errors.extend(all_errors[24:30])
 non_critical_errors.extend(all_errors[31:33])
 non_critical_errors.extend(all_errors[35:39])
+non_critical_errors.append(all_errors[12])
 critical_errors.extend((all_errors)[8:10])
-critical_errors.extend(all_errors[11:19])
+critical_errors.extend(all_errors[13:19])
 critical_errors.append(all_errors[33])
 critical_errors.append(all_errors[39])
 critical_errors.append(all_errors[4])
 print(non_critical_errors)
 print(critical_errors)
 print(all_errors)
+
+
 
 
 print(weekindexcount(338,time, int(start_date.weekday())))
@@ -71,6 +78,8 @@ for i in event_type:
         errorlst.append(i)
     lastcount+=1
 # print(set(errorlst))
+
+
 
 k=0
 week=1
@@ -100,6 +109,8 @@ errorsLIST=[]
 non_errorsLIST=[]
 index=0
 #r
+
+
 for event in value:
     deltaDATA={}
     if event in all_errors:
@@ -122,3 +133,28 @@ repair_needs['errors']=errorsLIST
 repair_needs['non_errors']=non_errorsLIST
 with open('jsons/atm_data.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(repair_needs, indent=4, ensure_ascii=False))
+
+
+AtmStatus={}
+one_more_index=0
+for event in value:
+    if str(event).isdigit():
+        AtmStatus[AtmID[one_more_index]]='Не нуждается в осблуживании'
+    else:
+        if event in critical_errors:
+            AtmStatus[AtmID[one_more_index]]={'Пиздец, иди экзорцистов вызывай' : event}
+        elif event in non_critical_errors:
+            AtmStatus[AtmID[one_more_index]]={'Пока живем, но херово' : event}
+        else:
+            AtmStatus[AtmID[one_more_index]] = 'Не нуждается в осблуживании'
+    one_more_index+=1
+sorted_AtmStatus=sorted(AtmStatus.items())
+print(sorted_AtmStatus)
+AtmStatus={}
+print(list(set(sorted(AtmID))))
+for Atm in sorted(AtmID):
+    for key, value in sorted_AtmStatus:
+        if Atm==key:
+            AtmStatus[key]=value
+with open('jsons/AtmStatus.json', 'w', encoding='utf-8') as file:
+    file.write(json.dumps(AtmStatus, indent=4, ensure_ascii=False))
