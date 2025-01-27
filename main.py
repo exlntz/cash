@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, jsonify, send_from_directory
 import json
+import csv
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -18,7 +20,10 @@ def maps_def():
 
 @app.route('/admin')
 def admin_def():
-    return render_template('admin/admin.html')
+    # Загрузка данных из CSV файлов
+    mechanics_csv = pd.read_csv('csvfiles/mechanics.csv').to_dict(orient='records')
+    cars_csv = pd.read_csv('csvfiles/cars.csv').to_dict(orient='records')
+    return render_template('admin/admin.html', mechanics=mechanics_csv, cars=cars_csv)
 
 @app.route('/get_atm_data')
 def get_atm_data():
@@ -42,6 +47,30 @@ def save_atm_status():
 @app.route('/static/<path:path>')
 def serve_static(path):
     return send_from_directory('static', path)
+
+
+
+@app.route('/save_mechanic', methods=['POST'])
+def save_mechanic():
+    data = request.get_json()
+    name = data['name']
+    age = data['age']
+
+    # Сохранение данных в mechanics.csv
+    with open('csvfiles/mechanics.csv', 'a', encoding='utf-8', newline='') as fm:
+        csv.writer(fm).writerow([name, age])
+    return jsonify({'success': True})
+
+@app.route('/save_car', methods=['POST'])
+def save_car_def():
+    data = request.get_json()
+    name = data['name']
+    plate = data['plate']
+
+    # Сохранение данных в cars.csv
+    with open('csvfiles/cars.csv', 'a', encoding='utf-8', newline='') as fc:
+        csv.writer(fc).writerow([name, plate])
+    return jsonify({'success': True})
 
 if __name__ == '__main__':
     app.run(debug=True)

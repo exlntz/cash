@@ -34,12 +34,11 @@
                         <th>Возраст</th>
                         <th>Действие</th>
                     </tr>
-                </tr>
+                 </tr>
                 {% for row in mechanics %}
                 <tr>
                     <td>{{ row.Name }}</td>
                     <td>{{ row.Age }}</td>
-                    <td><button onclick="deleteMechanic(this)">Удалить</button></td>
                 </tr>
                 {% endfor %}
                 </thead>
@@ -71,7 +70,6 @@
                 <tr>
                     <td>{{ row.Name }}</td>
                     <td>{{ row.Number }}</td>
-                    <td><button onclick="deleteMechanic(this)">Удалить</button></td>
                 </tr>
                 {% endfor %}
                 </thead>
@@ -135,15 +133,6 @@
                     toggleCarForm();
                 }
             });
-        }
-        function deleteMechanic(button) {
-            const row = button.parentNode.parentNode; // Получаем строку
-            row.parentNode.removeChild(row); // Удаляем строку из таблицы
-        }
-
-        function deleteCar(button) {
-            const row = button.parentNode.parentNode; // Получаем строку
-            row.parentNode.removeChild(row); // Удаляем строку из таблицы
         }
     </script>
 </body>
