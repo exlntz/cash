@@ -2,7 +2,7 @@ const outputElement = document.getElementById('output');
 const filterButtons = document.querySelectorAll('.filter-btn');
 // Загрузка и отображение данных
 async function loadData() {
-    const response = await fetch('../../jsons/atmdata.json');
+    const response = await fetch('../../jsons/atm_data.json');
     const data = await response.json();
     return data;
 }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администрирование</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .form-container {
+            display: none;
+            margin-top: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-container">
+    <button onclick="showForm('form1')">Добавить банкомат</button>
+    <button onclick="showForm('form2')">Добавить механика</button>
+    <button onclick="showForm('form3')">Добавить машину инкассации</button>
+</div>
+
+<div id="form1" class="form-container">
+    <form action="am.html" method="POST">
+        <label for="name1">Номер банкомата:</label>
+        <input type="text" id="name1" name="name" required>
+
+        <label for="age1">Что-то еще банкомата:</label>
+        <input type="number" id="age1" name="age" required>
+
+        <input type="submit" value="Добавить банкомат">
+    </form>
+</div>
+
+<div id="form2" class="form-container">
+    <form action="/submit_mechanic" method="POST">
+        <label for="name2">Имя механика:</label>
+        <input type="text" id="name2" name="name" required>
+
+        <label for="age2">Возраст механика:</label>
+        <input type="number" id="age2" name="age" required>
+
+        <input type="submit" value="Добавить механика">
+    </form>
+</div>
+
+<div id="form3" class="form-container">
+    <form action="/submit_car" method="POST">
+        <label for="name3">Марка машины:</label>
+        <input type="text" id="name3" name="name" required>
+
+        <label for="age3">Номер машины:</label>
+        <input type="number" id="age3" name="age" required>
+
+        <input type="submit" value="Добавить машину инкассации">
+    </form>
+</div>
+
+<script>
+    function showForm(formId) {
+        const forms = document.querySelectorAll('.form-container');
+        forms.forEach(form => form.style.display = 'none');
+
+        const selectedForm = document.getElementById(formId);
+        selectedForm.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

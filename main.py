@@ -1,5 +1,6 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template, request, redirect, url_for, flash
 import csv
+import pandas as pd
 
 
 app = Flask(__name__)
@@ -29,7 +30,53 @@ def admin_def():
 
 
 
-@app.route('/submit_atm', methods=['POST'])
+#adasdajdasdnsabdjand
+
+
+
+@app.route('/')
+def index():
+    # Загрузка данных из CSV файлов
+    mechanics = pd.read_csv('mechanics.csv').to_dict(orient='records')
+    cars = pd.read_csv('cars.csv').to_dict(orient='records')
+    return render_template('index.html', mechanics=mechanics, cars=cars)
+
+
+@app.route('/save_mechanic', methods=['POST'])
+def save_mechanic():
+    name = request.form['mechanicName']
+    age = request.form['mechanicAge']
+    
+    # Сохранение данных в mechanics.csv
+    with open('mechanics.csv', 'a') as f:
+        f.write(f"{name},{age}\n")
+    
+    flash(f'Механик {name} добавлен!')
+    return redirect(url_for('index'))    
+
+
+
+@app.route('/save_car', methods=['POST'])
+def save_car():
+    name = request.form['carName']
+    plate = request.form['carPlate']
+    
+    # Сохранение данных в cars.csv
+    with open('cars.csv', 'a') as f:
+        f.write(f"{name},{plate}\n")
+    
+    flash(f'Машина {name} добавлена!')
+    return redirect(url_for('index'))
+
+
+
+
+
+
+
+
+
+@app.route('templates/admin/admin.html', methods=['POST'])
 def submit():
     # Получаем слово из формы
     name_atm = request.form.get('name1','Ошибка')
