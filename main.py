@@ -71,29 +71,5 @@ def save_car_def():
 def serve_static(path):
     return send_from_directory('static', path)
 
-
-
-@app.route('/save_mechanic', methods=['POST'])
-def save_mechanic():
-    data = request.get_json()
-    name = data['name']
-    age = data['age']
-
-    # Сохранение данных в mechanics.csv
-    with open('csvfiles/mechanics.csv', 'a', encoding='utf-8', newline='') as fm:
-        csv.writer(fm).writerow([name, age])
-    return jsonify({'success': True})
-
-@app.route('/save_car', methods=['POST'])
-def save_car_def():
-    data = request.get_json()
-    name = data['name']
-    plate = data['plate']
-
-    # Сохранение данных в cars.csv
-    with open('csvfiles/cars.csv', 'a', encoding='utf-8', newline='') as fc:
-        csv.writer(fc).writerow([name, plate])
-    return jsonify({'success': True})
-
 if __name__ == '__main__':
     app.run(debug=True)

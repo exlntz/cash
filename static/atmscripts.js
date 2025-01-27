@@ -10,12 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const statusPageInfo = document.getElementById('statusPageInfo');
     const addAtmButton = document.getElementById('addAtmButton');
     const addAtmForm = document.getElementById('addAtmForm');
+    const addressInput = document.getElementById('address');
+    const coordsInput = document.getElementById('coords');
 
     let atmData = {};
     let atmStatus = {};
     let currentPageErrors = 1;
     let currentPageStatuses = 1;
-    const itemsPerPage = 6;
+    const itemsPerPage = 9;
 
     fetch('/get_atm_data')
         .then(response => response.json())
@@ -72,19 +74,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     addAtmForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        const address = document.getElementById('address').value;
-        const coords = document.getElementById('coords').value;
+        const address = addressInput.value;
+        const coords = coordsInput.value;
 
-        const newAtmId = `Банкомат${Object.keys(atmStatus).length + 1}`;
+        // Генерация нового уникального ID для банкомата
+        const newAtmId = generateNewAtmId(atmStatus);
+
         atmStatus[newAtmId] = {
             lvl: 0,
-            askfor: "",
+            askfor: "None",
             address: address,
             coords: coords
         };
 
         saveJson(atmStatus, '/save_atm_status');
         addAtmForm.style.display = 'none';
+        clearForm();
         renderStatuses();
     });
 
@@ -184,5 +189,19 @@ document.addEventListener('DOMContentLoaded', function() {
             body: JSON.stringify(data)
         })
         .catch(error => console.error('Ошибка сохранения:', error));
+    }
+
+    function generateNewAtmId(atmStatus) {
+        const atmIds = Object.keys(atmStatus);
+        let newId = 1;
+        while (atmIds.includes(`Банкомат${newId}`)) {
+            newId++;
+        }
+        return `Банкомат${newId}`;
+    }
+
+    function clearForm() {
+        addressInput.value = '';
+        coordsInput.value = '';
     }
 });

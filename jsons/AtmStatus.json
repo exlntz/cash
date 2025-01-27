@@ -1,6 +1,28 @@
 {
-<<<<<<< Updated upstream
-=======
+    "Банкомат1": {
+        "askfor": "service",
+        "lvl": 1
+    },
+    "Банкомат10": {
+        "askfor": "service",
+        "lvl": 1
+    },
+    "Банкомат100": {
+        "address": "123213",
+        "askfor": "None",
+        "coords": "123",
+        "lvl": 0
+    },
+    "Банкомат101": {
+        "address": "123",
+        "askfor": "None",
+        "coords": "123",
+        "lvl": 0
+    },
+    "Банкомат11": {
+        "askfor": "None",
+        "lvl": 0
+    },
     "Банкомат12": {
         "askfor": "service",
         "lvl": 2
@@ -93,7 +115,6 @@
         "askfor": "None",
         "lvl": 0
     },
->>>>>>> Stashed changes
     "Банкомат33": {
         "askfor": "service",
         "lvl": 1
@@ -107,8 +128,10 @@
         "lvl": 1
     },
     "Банкомат36": {
-        "askfor": "service",
-        "lvl": 1
+        "address": "123",
+        "askfor": "None",
+        "coords": "123",
+        "lvl": 0
     },
     "Банкомат37": {
         "askfor": "None",
@@ -149,7 +172,6 @@
     "Банкомат45": {
         "askfor": "service",
         "lvl": 1
-<<<<<<< Updated upstream
     },
     "Банкомат46": {
         "askfor": "None",
@@ -166,8 +188,6 @@
     "Банкомат49": {
         "askfor": "service",
         "lvl": 1
-=======
->>>>>>> Stashed changes
     },
     "Банкомат5": {
         "askfor": "None",
@@ -362,15 +382,8 @@
         "lvl": 0
     },
     "Банкомат93": {
-<<<<<<< Updated upstream
         "askfor": "None",
         "lvl": 0
-=======
-        "lvl": 0,
-        "askfor": "",
-        "address": "asds",
-        "coords": "12312"
->>>>>>> Stashed changes
     },
     "Банкомат94": {
         "askfor": "incass",
