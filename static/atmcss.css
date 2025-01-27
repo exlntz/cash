@@ -1,46 +1,102 @@
-body {
-    display: flex;
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 15px; /* Увеличено для всего интерфейса */
+    padding: 0;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
 .sidebar {
-    background-color: #b2e0b2; /* Зеленый пастельный цвет */
+    background-color: #b2e0b2;
     border-radius: 10px;
     padding: 20px;
-    width: auto; /* Ширина подстраивается под содержимое */
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: 100%;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
 }
+
 .menu-item {
-    margin: 10px 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
-.menu-item a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2em; /* Увеличен размер шрифта */
+
+.menu-item:hover {
+    background-color: #9fdb9f;
 }
+
 .content {
+    margin-left: 20px;
     padding: 20px;
     flex-grow: 1;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-.filter {
+
+.filter-buttons {
     margin-bottom: 20px;
 }
-.filter-btn {
+
+.filter-buttons button {
     margin-right: 10px;
     padding: 10px;
-    font-size: 1.2em; /* Увеличен размер шрифта */
+    border: none;
+    border-radius: 5px;
+    background-color: #d0e8d0;
+    cursor: pointer;
 }
-.output-container {
-    max-height: 400px; /* Максимальная высота для прокрутки */
-    overflow-y: auto; /* Прокрутка по вертикали */
-    border: 1px solid #ccc; /* Обводка контейнера */
-    border-radius: 5px; /* Закругленные углы обводки */
-    padding: 10px; /* Отступ внутри контейнера */
+
+.filter-buttons button:hover {
+    background-color: #a1c6a1;
 }
-/* Увеличение элементов вывода */
-.output-container div {
-    margin: 5px 0; /* Отступ для строк */
-    font-size: 1.2em; /* Увеличен размер шрифта для вывода банкоматов */
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e0f0e0;
+}
+
+.add-atm-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b2e0b2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-atm-button:hover {
+    background-color: #9fdb9f;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+label {
+    margin: 5px 0;
 }

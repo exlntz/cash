@@ -1,48 +1,99 @@
-const outputElement = document.getElementById('output');
-const filterButtons = document.querySelectorAll('.filter-btn');
-// Загрузка и отображение данных
-async function loadData() {
-    const response = await fetch('../../jsons/atm_data.json');
-    const data = await response.json();
-    return data;
-}
-function formatDate(dateString) {
-    const date = new Date(dateString);
-    return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-}
-function displayData(data) {
-    outputElement.innerHTML = ''; // Очистка предыдущего вывода
-    data.forEach(item => {
-        const errorString = `${formatDate(item.date)} - Банкомат(${item.id}) - ${item.error}`;
-        const div = document.createElement('div');
-        div.textContent = errorString;
-        outputElement.appendChild(div);
-    });
-}
-// Фильтрация и сортировка данных
-async function filterData(filter) {
-    const data = await loadData();
+let atmData, atmStatus;
 
-    let filteredData = [];
-    if (filter === 'all') {
-        filteredData = [...data.criticalerrors, ...data.errors, ...data.nonerrors];
-    } else if (filter === 'errors') {
-        filteredData = [...data.errors];
-    } else if (filter === 'critical') {
-        filteredData = [...data.criticalerrors];
-    }
-    // Сортировка
-    filteredData.sort((a, b) => {
-        return a.id - b.id || new Date(a.date) - new Date(b.date);
-    });
-    displayData(filteredData);
-}
-// Добавление обработчиков событий для кнопок фильтрации
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-        filterData(filter);
-    });
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadData();
+    renderErrorTable('all');
+    renderStatusTable();
 });
-// Инициализация
-filterData('all');
+
+async function loadData() {
+    const response1 = await fetch('../../jsons/atm_data.json');
+    atmData = await response1.json();
+
+    const response2 = await fetch('../../jsons/atmstatus.json');
+    atmStatus = await response2.json();
+}
+
+function renderErrorTable(filter) {
+    const tbody = document.getElementById("errorTbody");
+    tbody.innerHTML = '';
+
+    let errors = [];
+    if (filter === 'all') {
+        errors = [...atmData.Criticalerrors, ...atmData.errors, ...atmData.nonerrors];
+    } else if (filter === 'errors') {
+        errors = [...atmData.errors];
+    } else if (filter === 'critical') {
+        errors = [...atmData.Criticalerrors];
+    }
+
+    errors.forEach(err => {
+        const row = tbody.insertRow();
+        row.innerHTML = `<td>${err.date} - ${err.id}</td><td>${err.error}</td>`;
+    });
+}
+
+function renderStatusTable() {
+    const tbody = document.getElementById("statusTbody");
+    tbody.innerHTML = '';
+
+    for (let [id, status] of Object.entries(atmStatus)) {
+        const row = tbody.insertRow();
+        row.innerHTML = `<td>${id}</td><td>${status.askfor}</td><td><button onclick="deleteStatus('${id}')">Удалить</button></td>`;
+        
+        if (status.lvl === 1) {
+            row.style.backgroundColor = "lightyellow";
+        } else if (status.lvl === 2) {
+            row.style.backgroundColor = "#f08080"; // Light red
+        }
+    }
+}
+
+function addAtm() {
+    document.getElementById("formContainer").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("formContainer").style.display = "none";
+}
+
+function saveAtm() {
+    const address = document.getElementById("atmAddress").value;
+    const coords = document.getElementById("atmCoords").value;
+
+    // Update atmStatus
+    for (let id in atmStatus) {
+        atmStatus[id].address = address;
+        atmStatus[id].coords = coords;
+    }
+
+    fetch('atmstatus.json', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(atmStatus)
+    }).then(() => {
+        closeForm();
+        renderStatusTable();
+    });
+}
+
+function deleteStatus(id) {
+    delete atmStatus[id];
+
+    // Save changes in the JSON file again
+    fetch('atmstatus.json', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(atmStatus)
+    }).then(() => {
+        renderStatusTable();
+    });
+}
+
+function filterData(filter) {
+    renderErrorTable(filter);
+}
