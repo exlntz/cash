@@ -32,14 +32,12 @@
                     <tr>
                         <th>Имя</th>
                         <th>Возраст</th>
-                        <th>Действие</th>
                     </tr>
                  </tr>
                 {% for row in mechanics %}
                 <tr>
                     <td>{{ row.Name }}</td>
                     <td>{{ row.Age }}</td>
-                    <td>{{ row.Activity }}</td>
                 </tr>
                 {% endfor %}
                 </thead>
@@ -65,13 +63,11 @@
                 <tr>
                     <th>Марка</th>
                     <th>Номер машины</th>
-                    <th>Действие</th>
                 </tr>
                 {% for row in cars %}
                 <tr>
                     <td>{{ row.Name }}</td>
                     <td>{{ row.Number }}</td>
-                    <td>{{ row.Activity }}</td>
                 </tr>
                 {% endfor %}
             </table>
