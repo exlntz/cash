@@ -154,7 +154,7 @@ AtmStatus={}
 one_more_index=0
 for event in value:
     if str(event).isdigit():
-        AtmStatus[AtmID[one_more_index]]='Не нуждается в осблуживании'
+        AtmStatus[AtmID[one_more_index]]={'lvl' : 0 , 'askfor' : 'None'}
     else:
         if event in incass_critical_errors:
             AtmStatus[AtmID[one_more_index]]={'lvl' : 2 , 'askfor' : 'incass'}
