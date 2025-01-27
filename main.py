@@ -24,7 +24,7 @@ def maps_def():
 
 
 
-@app.route('/admin')
+#@app.route('/admin')
 def admin_def():
     return render_template('admin/admin.html')
 
@@ -34,12 +34,12 @@ def admin_def():
 
 
 
-@app.route('/')
+@app.route('/admin')
 def index():
     # Загрузка данных из CSV файлов
-    mechanics = pd.read_csv('mechanics.csv').to_dict(orient='records')
-    cars = pd.read_csv('cars.csv').to_dict(orient='records')
-    return render_template('index.html', mechanics=mechanics, cars=cars)
+    mechanics = pd.read_csv('csvfiles/mechanics.csv').to_dict(orient='records')
+    cars = pd.read_csv('csvfiles/cars.csv').to_dict(orient='records')
+    return render_template('/admin/admin.html', mechanics=mechanics, cars=cars)
 
 
 @app.route('/save_mechanic', methods=['POST'])
@@ -76,7 +76,7 @@ def save_car():
 
 
 
-@app.route('templates/admin/admin.html', methods=['POST'])
+#@app.route('templates/admin/admin.html', methods=['POST'])
 def submit():
     # Получаем слово из формы
     name_atm = request.form.get('name1','Ошибка')
