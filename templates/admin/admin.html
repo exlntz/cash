@@ -35,6 +35,14 @@
                         <th>Возраст</th>
                         <th>Действие</th>
                     </tr>
+                 </tr>
+                {% for row in mechanics %}
+                <tr>
+                    <td>{{ row.Name }}</td>
+                    <td>{{ row.Age }}</td>
+                    <td>{{ row.c }}</td>
+                </tr>
+                {% endfor %}
                 </thead>
                 <tbody id="mechanicsTbody">
                     <!-- Механики будут добавлены здесь -->
@@ -55,16 +63,18 @@
             </form>
 
             <table id="carsTable">
-                <thead>
-                    <tr>
-                        <th>Имя</th>
-                        <th>Номер машины</th>
-                        <th>Действие</th>
-                    </tr>
-                </thead>
-                <tbody id="carsTbody">
-                    <!-- Машины будут добавлены здесь -->
-                </tbody>
+                <tr>
+                    <th>Имя</th>
+                    <th>Номер машины</th>
+                    <th>Действие</th>
+                </tr>
+                {% for row in mechanics %}
+                <tr>
+                    <td>{{ row.Name }}</td>
+                    <td>{{ row.Age }}</td>
+                    <td>{{ row.c }}</td>
+                </tr>
+                {% endfor %}
             </table>
         </div>
     </div>

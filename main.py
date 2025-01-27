@@ -24,22 +24,16 @@ def maps_def():
 
 
 
-#@app.route('/admin')
-def admin_def():
-    return render_template('admin/admin.html')
-
-
-
-#adasdajdasdnsabdjand
-
 
 
 @app.route('/admin')
-def index():
+def admin_def():
     # Загрузка данных из CSV файлов
-    mechanics = pd.read_csv('csvfiles/mechanics.csv').to_dict(orient='records')
-    cars = pd.read_csv('csvfiles/cars.csv').to_dict(orient='records')
-    return render_template('/admin/admin.html', mechanics=mechanics, cars=cars)
+    mechanics_csv = pd.read_csv('csvfiles/mechanics.csv').to_dict(orient='records')
+    print(mechanics_csv)
+    cars_csv = pd.read_csv('csvfiles/cars.csv').to_dict(orient='records')
+    print(cars_csv)
+    return render_template('/admin/admin.html', mechanics=mechanics_csv, cars=cars_csv)
 
 
 @app.route('/save_mechanic', methods=['POST'])
@@ -48,25 +42,23 @@ def save_mechanic():
     age = request.form['mechanicAge']
     
     # Сохранение данных в mechanics.csv
-    with open('mechanics.csv', 'a') as f:
-        f.write(f"{name},{age}\n")
-    
-    flash(f'Механик {name} добавлен!')
-    return redirect(url_for('index'))    
+    with open('csvfiles/mechanics.csv', 'a',encoding='utf-8',newline='') as fm:
+        csv.writer(fm).writerow([name,age])
+
+    return f'механику добавлен'
 
 
 
 @app.route('/save_car', methods=['POST'])
-def save_car():
-    name = request.form['carName']
-    plate = request.form['carPlate']
+def save_car_def():
+    name = request.form.get('carName')
+    plate = request.form.get('carPlate')
     
     # Сохранение данных в cars.csv
-    with open('cars.csv', 'a') as f:
-        f.write(f"{name},{plate}\n")
-    
-    flash(f'Машина {name} добавлена!')
-    return redirect(url_for('index'))
+    with open('csvfiles/mechanics.csv', 'a', encoding='utf-8', newline='') as fc:
+        csv.writer(fc).writerow([name, plate])
+
+    return f'механик успешно добавлен'
 
 
 
