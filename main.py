@@ -44,6 +44,29 @@ def save_atm_status():
         json.dump(data, f, ensure_ascii=False, indent=4)
     return jsonify({'success': True})
 
+
+@app.route('/save_mechanic', methods=['POST'])
+def save_mechanic():
+    data = request.get_json()
+    name = data['name']
+    age = data['age']
+
+    # Сохранение данных в mechanics.csv
+    with open('csvfiles/mechanics.csv', 'a', encoding='utf-8', newline='') as fm:
+        csv.writer(fm).writerow([name, age])
+    return jsonify({'success': True})
+
+@app.route('/save_car', methods=['POST'])
+def save_car_def():
+    data = request.get_json()
+    name = data['name']
+    plate = data['plate']
+
+    # Сохранение данных в cars.csv
+    with open('csvfiles/cars.csv', 'a', encoding='utf-8', newline='') as fc:
+        csv.writer(fc).writerow([name, plate])
+    return jsonify({'success': True})
+
 @app.route('/static/<path:path>')
 def serve_static(path):
     return send_from_directory('static', path)

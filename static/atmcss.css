@@ -31,10 +31,18 @@ main {
     margin-bottom: 20px;
 }
 
+.table-container {
+    max-height: 40vh; /* Фиксированная высота */
+    overflow-y: auto; /* Прокрутка по вертикали */
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
 }
 
 th, td {
@@ -45,6 +53,9 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 tr:nth-child(even) {
@@ -87,4 +98,29 @@ form input {
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:hover {
+    background-color: #005f73;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
