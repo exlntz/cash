@@ -39,7 +39,7 @@
                 <tr>
                     <td>{{ row.Name }}</td>
                     <td>{{ row.Age }}</td>
-                    <td>{{ row.c }}</td>
+                    <td>{{ row.Activity }}</td>
                 </tr>
                 {% endfor %}
                 </thead>
@@ -53,7 +53,7 @@
             <h2>Машины инкассации</h2>
             <button id="addCarBtn" onclick="toggleCarForm()">Добавить машину инкассации</button>
             <form id="carForm" style="display: none;">
-                <label for="carName">Имя:</label>
+                <label for="carName">Марка:</label>
                 <input type="text" id="carName" required>
                 <label for="carPlate">Номер машины:</label>
                 <input type="text" id="carPlate" required>
@@ -63,15 +63,15 @@
 
             <table id="carsTable">
                 <tr>
-                    <th>Имя</th>
+                    <th>Марка</th>
                     <th>Номер машины</th>
                     <th>Действие</th>
                 </tr>
-                {% for row in mechanics %}
+                {% for row in cars %}
                 <tr>
                     <td>{{ row.Name }}</td>
-                    <td>{{ row.Age }}</td>
-                    <td>{{ row.c }}</td>
+                    <td>{{ row.Number }}</td>
+                    <td>{{ row.Activity }}</td>
                 </tr>
                 {% endfor %}
             </table>
