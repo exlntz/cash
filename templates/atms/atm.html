@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Управление банкоматами</title>
-    <link rel="stylesheet" href="../../static/atmcss.css">
+    <title>Администрирование банкоматов</title>
+    <link rel="stylesheet" href="/static/atmcss.css">
 </head>
 <body>
     <div class="sidebar">
-        <div class="menu-item" onclick="window.location.href='gm.html'">Карты</div>
-        <div class="menu-item" onclick="window.location.href='admin.html'">Сотрудники</div>
+        <a href="/maps">Карты</a>
+        <a href="/admin">Сотрудники</a>
     </div>
-    <div class="content">
-        <div class="filter-buttons">
-            <button onclick="filterData('all')">Все</button>
-            <button onclick="filterData('errors')">Ошибки</button>
-            <button onclick="filterData('critical')">Критические ошибки</button>
+    <main>
+        <div class="filter">
+            <select id="errorFilter">
+                <option value="all">Все</option>
+                <option value="errors">Ошибки</option>
+                <option value="criticalErrors">Критические ошибки</option>
+            </select>
         </div>
-
         <table id="errorTable">
             <thead>
                 <tr>
@@ -25,11 +26,10 @@
                     <th>Ошибка</th>
                 </tr>
             </thead>
-            <tbody id="errorTbody">
-                <!-- Данные будут заполнены динамически -->
+            <tbody>
+                <!-- Данные будут загружены сюда -->
             </tbody>
         </table>
-
         <table id="statusTable">
             <thead>
                 <tr>
@@ -38,23 +38,19 @@
                     <th>Действие</th>
                 </tr>
             </thead>
-            <tbody id="statusTbody">
-                <!-- Данные будут заполнены динамически -->
+            <tbody>
+                <!-- Данные будут загружены сюда -->
             </tbody>
         </table>
-
-        <button class="add-atm-button" onclick="addAtm()">Добавить банкомат</button>
-        <div id="formContainer" class="form-container" style="display:none;">
-            <h3>Добавить банкомат</h3>
-            <label for="atmAddress">Адрес:</label>
-            <input type="text" id="atmAddress">
-            <label for="atmCoords">Координаты:</label>
-            <input type="text" id="atmCoords">
-            <button onclick="saveAtm()">Сохранить</button>
-            <button onclick="closeForm()">Отмена</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+        <button id="addAtmButton">Добавить банкомат</button>
+        <form id="addAtmForm" style="display:none;">
+            <label for="address">Адрес:</label>
+            <input type="text" id="address" name="address">
+            <label for="coords">Координаты:</label>
+            <input type="text" id="coords" name="coords">
+            <button type="submit">Сохранить</button>
+        </form>
+    </main>
+    <script src="/static/atmscripts.js"></script>
 </body>
 </html>

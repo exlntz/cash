@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request, jsonify
-import csv
-import pandas as pd
+from flask import Flask, render_template, request, jsonify, send_from_directory
+import json
 
 app = Flask(__name__)
 
@@ -19,32 +18,30 @@ def maps_def():
 
 @app.route('/admin')
 def admin_def():
-    # Загрузка данных из CSV файлов
-    mechanics_csv = pd.read_csv('csvfiles/mechanics.csv').to_dict(orient='records')
-    cars_csv = pd.read_csv('csvfiles/cars.csv').to_dict(orient='records')
-    return render_template('admin/admin.html', mechanics=mechanics_csv, cars=cars_csv)
+    return render_template('admin/admin.html')
 
-@app.route('/save_mechanic', methods=['POST'])
-def save_mechanic():
+@app.route('/get_atm_data')
+def get_atm_data():
+    with open('jsons/atm_data.json', 'r', encoding='utf-8') as f:
+        atm_data = json.load(f)
+    return jsonify(atm_data)
+
+@app.route('/get_atm_status')
+def get_atm_status():
+    with open('jsons/atmstatus.json', 'r', encoding='utf-8') as f:
+        atm_status = json.load(f)
+    return jsonify(atm_status)
+
+@app.route('/save_atm_status', methods=['POST'])
+def save_atm_status():
     data = request.get_json()
-    name = data['name']
-    age = data['age']
-    
-    # Сохранение данных в mechanics.csv
-    with open('csvfiles/mechanics.csv', 'a', encoding='utf-8', newline='') as fm:
-        csv.writer(fm).writerow([name, age])
+    with open('jsons/atmstatus.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
     return jsonify({'success': True})
 
-@app.route('/save_car', methods=['POST'])
-def save_car_def():
-    data = request.get_json()
-    name = data['name']
-    plate = data['plate']
-    
-    # Сохранение данных в cars.csv
-    with open('csvfiles/cars.csv', 'a', encoding='utf-8', newline='') as fc:
-        csv.writer(fc).writerow([name, plate])
-    return jsonify({'success': True})
+@app.route('/static/<path:path>')
+def serve_static(path):
+    return send_from_directory('static', path)
 
 if __name__ == '__main__':
     app.run(debug=True)

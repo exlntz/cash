@@ -1,102 +1,90 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: Arial, sans-serif;
     display: flex;
-    height: 100vh;
-    background-color: #f5f5f5;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 .sidebar {
-    background-color: #b2e0b2;
-    border-radius: 10px;
+    width: 200px;
+    height: 100vh;
+    background-color: #b3e6cc;
+    border-radius: 10px 0 0 10px;
     padding: 20px;
-    height: 100%;
-    width: 220px;
-    display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
 }
 
-.menu-item {
-    margin-bottom: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
+.sidebar a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
 }
 
-.menu-item:hover {
-    background-color: #9fdb9f;
-}
-
-.content {
-    margin-left: 20px;
+main {
+    flex: 1;
     padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
 }
 
-.filter-buttons {
+.filter {
     margin-bottom: 20px;
-}
-
-.filter-buttons button {
-    margin-right: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #d0e8d0;
-    cursor: pointer;
-}
-
-.filter-buttons button:hover {
-    background-color: #a1c6a1;
 }
 
 table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #e0f0e0;
+    background-color: #f2f2f2;
 }
 
-.add-atm-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #b2e0b2;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr.yellow {
+    background-color: #fff9c4;
+}
+
+tr.red {
+    background-color: #ffcdd2;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px;
 }
 
-.add-atm-button:hover {
-    background-color: #9fdb9f;
+button:hover {
+    background-color: #45a049;
 }
 
-.form-container {
-    display: flex;
-    flex-direction: column;
+form {
     margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-label {
-    margin: 5px 0;
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
