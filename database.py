@@ -50,6 +50,10 @@ for status in all_value:
 all_errors.sort()
 non_critical_errors=[]
 critical_errors=[]
+incass_critical_errors=[]
+service_critical_errors=[]
+incass_non_critical_errors=[]
+service_non_critical_errors=[]
 non_critical_errors.extend(all_errors[20:23])
 non_critical_errors.extend(all_errors[24:30])
 non_critical_errors.extend(all_errors[31:33])
@@ -60,10 +64,21 @@ critical_errors.extend(all_errors[13:19])
 critical_errors.append(all_errors[33])
 critical_errors.append(all_errors[39])
 critical_errors.append(all_errors[4])
-print(non_critical_errors)
-print(critical_errors)
-print(all_errors)
 
+incass_critical_errors.append(critical_errors[0])
+incass_critical_errors.append(critical_errors[6])
+
+service_critical_errors.append(critical_errors[1])
+service_critical_errors.extend(critical_errors[3:6])
+service_critical_errors.extend(critical_errors[7:])
+
+incass_non_critical_errors.append(non_critical_errors[0])
+
+service_non_critical_errors.extend(non_critical_errors[1:])
+
+print(non_critical_errors)
+print(incass_non_critical_errors)
+print(service_non_critical_errors)
 
 
 
@@ -141,17 +156,19 @@ for event in value:
     if str(event).isdigit():
         AtmStatus[AtmID[one_more_index]]='Не нуждается в осблуживании'
     else:
-        if event in critical_errors:
-            AtmStatus[AtmID[one_more_index]]={'Пиздец, иди экзорцистов вызывай' : event}
-        elif event in non_critical_errors:
-            AtmStatus[AtmID[one_more_index]]={'Пока живем, но херово' : event}
+        if event in incass_critical_errors:
+            AtmStatus[AtmID[one_more_index]]={'lvl' : 2 , 'askfor' : 'incass'}
+        elif event in service_critical_errors:
+            AtmStatus[AtmID[one_more_index]]={'lvl' : 2 , 'askfor' : 'service'}
+        elif event in incass_non_critical_errors:
+            AtmStatus[AtmID[one_more_index]] = {'lvl': 1, 'askfor': 'incass'}
+        elif event in service_non_critical_errors:
+            AtmStatus[AtmID[one_more_index]]={'lvl' : 1 , 'askfor' : 'service'}
         else:
-            AtmStatus[AtmID[one_more_index]] = 'Не нуждается в осблуживании'
+            AtmStatus[AtmID[one_more_index]] = {'lvl' : 0 , 'askfor' : 'None'}
     one_more_index+=1
 sorted_AtmStatus=sorted(AtmStatus.items())
-print(sorted_AtmStatus)
 AtmStatus={}
-print(list(set(sorted(AtmID))))
 for Atm in sorted(AtmID):
     for key, value in sorted_AtmStatus:
         if Atm==key:
