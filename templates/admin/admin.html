@@ -14,7 +14,6 @@
     </div>
     <div class="content">
         <h1>Управление механиками и машинами инкассации</h1>
-
         <div class="table-section">
             <h2>Механики</h2>
             <button id="addMechanicBtn" onclick="toggleMechanicForm()">Добавить механика</button>
@@ -26,7 +25,6 @@
                 <button type="button" onclick="addMechanic()">Добавить механика</button>
                 <button type="button" onclick="toggleMechanicForm()">Отмена</button>
             </form>
-
             <table id="mechanicsTable">
                 <thead>
                     <tr>
@@ -34,21 +32,21 @@
                         <th>Возраст</th>
                         <th>Действие</th>
                     </tr>
-                </tr>
-                {% for row in mechanics %}
-                <tr>
-                    <td>{{ row.Name }}</td>
-                    <td>{{ row.Age }}</td>
-                    <td><button onclick="deleteMechanic(this)">Удалить</button></td>
-                </tr>
-                {% endfor %}
                 </thead>
+                <tbody>
+                    {% for row in mechanics %}
+                    <tr>
+                        <td>{{ row.NameM }}</td>
+                        <td>{{ row.Age }}</td>
+                        <td><button onclick="deleteMechanic(this)">Удалить</button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
                 <tbody id="mechanicsTbody">
                     <!-- Механики будут добавлены здесь -->
                 </tbody>
             </table>
         </div>
-
         <div class="table-section">
             <h2>Машины инкассации</h2>
             <button id="addCarBtn" onclick="toggleCarForm()">Добавить машину инкассации</button>
@@ -60,43 +58,49 @@
                 <button type="button" onclick="addCar()">Добавить машину</button>
                 <button type="button" onclick="toggleCarForm()">Отмена</button>
             </form>
-
             <table id="carsTable">
-                <tr>
-                    <th>Марка</th>
-                    <th>Номер машины</th>
-                    <th>Действие</th>
-                </tr>
-                {% for row in cars %}
-                <tr>
-                    <td>{{ row.Name }}</td>
-                    <td>{{ row.Number }}</td>
-                    <td><button onclick="deleteMechanic(this)">Удалить</button></td>
-                </tr>
-                {% endfor %}
+                <thead>
+                    <tr>
+                        <th>Марка</th>
+                        <th>Номер машины</th>
+                        <th>Действие</th>
+                    </tr>
                 </thead>
+                <tbody>
+                    {% for row in cars %}
+                    <tr>
+                        <td>{{ row.NameC }}</td>
+                        <td>{{ row.Number }}</td>
+                        <td><button onclick="deleteCar(this)">Удалить</button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
                 <tbody id="carsTbody">
                     <!-- Машины будут добавлены здесь -->
                 </tbody>
             </table>
         </div>
     </div>
-
     <script>
         function toggleMechanicForm() {
             const form = document.getElementById('mechanicForm');
             form.style.display = form.style.display === 'none' ? 'block' : 'none';
+            // Очистка полей ввода
+            document.getElementById('mechanicName').value = '';
+            document.getElementById('mechanicAge').value = '';
         }
 
         function toggleCarForm() {
             const form = document.getElementById('carForm');
             form.style.display = form.style.display === 'none' ? 'block' : 'none';
+            // Очистка полей ввода
+            document.getElementById('carName').value = '';
+            document.getElementById('carPlate').value = '';
         }
 
         function addMechanic() {
             const name = document.getElementById('mechanicName').value;
             const age = document.getElementById('mechanicAge').value;
-
             fetch('/save_mechanic', {
                 method: 'POST',
                 headers: {
@@ -109,8 +113,10 @@
                 if (data.success) {
                     const tbody = document.getElementById('mechanicsTbody');
                     const row = tbody.insertRow();
-                    row.innerHTML = `<td>${name}</td><td>${age}</td><td><button>Удалить</button></td>`;
+                    row.innerHTML = `<td>${name}</td><td>${age}</td><td><button onclick="deleteMechanic(this)">Удалить</button></td>`;
                     toggleMechanicForm();
+                } else {
+                    alert('Ошибка при добавлении механика');
                 }
             });
         }
@@ -118,7 +124,6 @@
         function addCar() {
             const name = document.getElementById('carName').value;
             const plate = document.getElementById('carPlate').value;
-
             fetch('/save_car', {
                 method: 'POST',
                 headers: {
@@ -131,19 +136,52 @@
                 if (data.success) {
                     const tbody = document.getElementById('carsTbody');
                     const row = tbody.insertRow();
-                    row.innerHTML = `<td>${name}</td><td>${plate}</td><td><button>Удалить</button></td>`;
+                    row.innerHTML = `<td>${name}</td><td>${plate}</td><td><button onclick="deleteCar(this)">Удалить</button></td>`;
                     toggleCarForm();
+                } else {
+                    alert('Ошибка при добавлении машины');
                 }
             });
         }
+
         function deleteMechanic(button) {
             const row = button.parentNode.parentNode; // Получаем строку
-            row.parentNode.removeChild(row); // Удаляем строку из таблицы
+            const name = row.cells[0].innerText; // Получаем имя механика
+            fetch('/delete_mechanic', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    row.parentNode.removeChild(row); // Удаляем строку из таблицы
+                } else {
+                    alert('Ошибка при удалении механика');
+                }
+            });
         }
 
         function deleteCar(button) {
             const row = button.parentNode.parentNode; // Получаем строку
-            row.parentNode.removeChild(row); // Удаляем строку из таблицы
+            const plate = row.cells[1].innerText; // Получаем номер машины
+            fetch('/delete_car', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ plate })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    row.parentNode.removeChild(row); // Удаляем строку из таблицы
+                } else {
+                    alert('Ошибка при удалении машины');
+                }
+            });
         }
     </script>
 </body>
