@@ -32,9 +32,24 @@ def weekindexcount(index0,list, date0):
             k+=1
     return k
 k=0
+def monthindexcount(index0,list, date0):
+    k=0
+    month0=list[index0:][0][5:7]
+    a=list[index0:][0][8:10]
+    if str(int(month0)) in '1357810' or str(int(month0)) in '12':
+        raznday=31-date0
+    elif str(int(month0)) in '246911':
+        raznday=30-date0
+    else:
+        raznday = 28 - date0
+    for s in list:
+        if int(a)==int(s[5:7])-raznday:
+            break
+        else:
+            k+=1
+    return k
 
-
-
+print()
 # for s in time:
 #     print(s, s[8:10],k)
 #     k+=1
@@ -110,20 +125,37 @@ k=0
 week=1
 with open('jsons/atm_errors_data.json', 'w', encoding='utf-8') as file:
     file.write('')
+
+
+monthdata={}
+weekEndData={}
+monthstopcount=monthindexcount(0, time, int(start_date.weekday()))
+monthcount=1
 while k<lastcount:
-    stopcount=weekindexcount(k,time, start_date.weekday())
+    if k>monthstopcount:
+        monthdata[('month'+str(monthcount))]=weekEndData
+        weekEndData={}
+        monthcount+=1
+        monthstopcount=monthindexcount(k, time, start_date.weekday())
+    stopcount_week=weekindexcount(k,time, start_date.weekday())
     weekdata= {}
-    for item in event_type[k: stopcount]:
-        if k>=stopcount:
+
+    for item in event_type[k: stopcount_week]:
+        if k>=stopcount_week:
             break
         if "ОШИБКА" in item.upper():
             weekdata[AtmID[k]]=event_type[k]
             firsttime = list(map(int, time[k][0:10].split('-')))
         k+=1
-    with open('jsons/atm_errors_data.json', 'a', encoding='utf-8') as file:
-        file.write(json.dumps({('неделя '+str(week)):weekdata}, indent=4, ensure_ascii=False))
+    key='неделя '+str(week)
+
+    weekEndData[key]=weekdata
     start_date=datetime.date(firsttime[0],firsttime[1],firsttime[2])
     week+=1
+monthdata[('month'+str(monthcount))]=weekEndData
+print(monthdata)
+with open('jsons/atm_errors_data.json', 'a', encoding='utf-8') as file:
+    file.write(json.dumps(monthdata, indent=4, ensure_ascii=False))
 #print(all_errors)
 repair_needs={}
 # critical_errorsDATA={}
