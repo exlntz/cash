@@ -2,10 +2,6 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 import json
 import csv
 import pandas as pd
-import logging
-
-logging.basicConfig(level=logging.DEBUG)
-
 
 app = Flask(__name__)
 
@@ -54,89 +50,74 @@ def serve_static(path):
 
 
 
-@app.route('/save_mechanic', methods=['POST'])
-def save_mechanic():
-    data = request.get_json()
-    mechanics = read_csv('csvfiles/mechanics.csv')
-    mechanics.append(data)
-    write_csv('csvfiles/mechanics.csv', mechanics)
-    return jsonify({'success': True})
+#@app.route('/save_mechanic', methods=['POST'])
+#def save_mechanic():
+   # data = request.get_json()
+   # name = data['name']
+   # age = data['age']
 
     # Сохранение данных в mechanics.csv
-    with open('csvfiles/mechanics.csv', 'a', encoding='utf-8', newline='') as fm:
-        csv.writer(fm).writerow([name, age])
+  # with open('csvfiles/mechanics.csv', 'a', encoding='utf-8', newline='') as fm:
+   #     csv.writer(fm).writerow([name, age])
+   # return jsonify({'success': True})
+
+#@app.route('/save_car', methods=['POST'])
+#def save_car_def():
+   # data = request.get_json()
+   # name = data['name']
+   # plate = data['plate']
+
+    # Сохранение данных в cars.csv
+   # with open('csvfiles/cars.csv', 'a', encoding='utf-8', newline='') as fc:
+  #      csv.writer(fc).writerow([name, plate])
+  #  return jsonify({'success': True})
+
+
+MECHANICS_FILE = 'csvfiles/mechanics.csv'
+CARS_FILE = 'csvfiles/cars.csv'
+
+def read_csv(file_path):
+    with open(file_path, mode='r', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        return list(reader)
+
+def write_csv(file_path, data, fieldnames):
+    with open(file_path, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(data)
+
+@app.route('/save_mechanic', methods=['POST'])
+def save_mechanic():
+    data = request.json
+    mechanics = read_csv(MECHANICS_FILE)
+    mechanics.append(data)
+    write_csv(MECHANICS_FILE, mechanics, ['name', 'age'])
+    return jsonify({'success': True})
+
+@app.route('/delete_mechanic', methods=['POST'])
+def delete_mechanic():
+    data = request.json
+    mechanics = read_csv(MECHANICS_FILE)
+    mechanics = [mech for mech in mechanics if mech['name'] != data['name'] or mech['age'] != str(data['age'])]
+    write_csv(MECHANICS_FILE, mechanics, ['name', 'age'])
     return jsonify({'success': True})
 
 @app.route('/save_car', methods=['POST'])
 def save_car():
-    data = request.get_json()
-    cars = read_csv('cars.csv')
+    data = request.json
+    cars = read_csv(CARS_FILE)
     cars.append(data)
-    write_csv('cars.csv', cars)
-    return jsonify({'success': True})
-
-    # Сохранение данных в cars.csv
-    with open('csvfiles/cars.csv', 'a', encoding='utf-8', newline='') as fc:
-        csv.writer(fc).writerow([name, plate])
-    return jsonify({'success': True})
-
-
-def read_csv(filename):
-    try:
-        df = pd.read_csv(filename)
-        return df.to_dict(orient='records')
-    except FileNotFoundError:
-        logging.warning(f"File {filename} not found. Creating an empty DataFrame with headers.")
-        if filename == 'mechanics.csv':
-            df = pd.DataFrame(columns=['Name', 'Age'])
-        elif filename == 'cars.csv':
-            df = pd.DataFrame(columns=['Name', 'Number'])
-        return df.to_dict(orient='records')
-    except pd.errors.EmptyDataError:
-        logging.warning(f"File {filename} is empty. Creating an empty DataFrame with headers.")
-        if filename == 'mechanics.csv':
-            df = pd.DataFrame(columns=['Name', 'Age'])
-        elif filename == 'cars.csv':
-            df = pd.DataFrame(columns=['Name', 'Number'])
-        return df.to_dict(orient='records')
-    except Exception as e:
-        logging.error(f"Error reading {filename}: {e}")
-        return []
-
-
-def write_csv(filename, data):
-    try:
-        if not data:
-            # Если список пустой, создаем новый CSV файл с заголовками
-            if filename == 'mechanics.csv':
-                df = pd.DataFrame(columns=['Name', 'Age'])
-            elif filename == 'cars.csv':
-                df = pd.DataFrame(columns=['Name', 'Number'])
-        else:
-            df = pd.DataFrame(data)
-        df.to_csv(filename, index=False, encoding='utf-8')
-    except Exception as e:
-        logging.error(f"Error writing to {filename}: {e}")
-
-
-@app.route('/delete_mechanic', methods=['POST'])
-def delete_mechanic():
-    data = request.get_json()
-    mechanics = read_csv('csvfiles/mechanics.csv')
-    mechanics_df = pd.DataFrame(mechanics)
-    mechanics_df = mechanics_df[mechanics_df['Name'] != data.get('name')]
-    write_csv('csvfiles/mechanics.csv', mechanics_df.to_dict(orient='records'))
+    write_csv(CARS_FILE, cars, ['name', 'plate'])
     return jsonify({'success': True})
 
 @app.route('/delete_car', methods=['POST'])
 def delete_car():
-    data = request.get_json()
-    cars = read_csv('cars.csv')
-    cars_df = pd.DataFrame(cars)
-    cars_df = cars_df[cars_df['Number'] != data.get('plate')]
-    write_csv('cars.csv', cars_df.to_dict(orient='records'))
+    data = request.json
+    cars = read_csv(CARS_FILE)
+    cars = [car for car in cars if car['name'] != data['name'] or car['plate'] != data['plate']]
+    write_csv(CARS_FILE, cars, ['name', 'plate'])
     return jsonify({'success': True})
-
 
 if __name__ == '__main__':
     app.run(debug=True)
