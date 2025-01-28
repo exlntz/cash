@@ -1,4 +1,120 @@
 {
+    "Банкомат1": {
+        "askfor": "service",
+        "lvl": 1
+    },
+    "Банкомат10": {
+        "askfor": "service",
+        "lvl": 1
+    },
+    "Банкомат100": {
+        "address": "123213",
+        "askfor": "None",
+        "coords": "123",
+        "lvl": 0
+    },
+    "Банкомат101": {
+        "address": "123",
+        "askfor": "None",
+        "coords": "123",
+        "lvl": 0
+    },
+    "Банкомат11": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат12": {
+        "askfor": "service",
+        "lvl": 2
+    },
+    "Банкомат13": {
+        "askfor": "service",
+        "lvl": 1
+    },
+    "Банкомат14": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат15": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат16": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат17": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат18": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат19": {
+        "askfor": "service",
+        "lvl": 1
+    },
+    "Банкомат2": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат20": {
+        "askfor": "service",
+        "lvl": 1
+    },
+    "Банкомат21": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат22": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат23": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат24": {
+        "askfor": "service",
+        "lvl": 1
+    },
+    "Банкомат25": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат26": {
+        "askfor": "service",
+        "lvl": 1
+    },
+    "Банкомат27": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат28": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат29": {
+        "askfor": "service",
+        "lvl": 2
+    },
+    "Банкомат3": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат30": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат31": {
+        "askfor": "None",
+        "lvl": 0
+    },
+    "Банкомат32": {
+        "askfor": "None",
+        "lvl": 0
+    },
     "Банкомат33": {
         "askfor": "service",
         "lvl": 1
@@ -12,8 +128,10 @@
         "lvl": 1
     },
     "Банкомат36": {
-        "askfor": "service",
-        "lvl": 1
+        "address": "123",
+        "askfor": "None",
+        "coords": "123",
+        "lvl": 0
     },
     "Банкомат37": {
         "askfor": "None",
