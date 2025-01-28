@@ -10,6 +10,10 @@ app = Flask(__name__)
 def home_def():
     return render_template('home.html')
 
+@app.route('/about')
+def about_def():
+    return render_template('about.html')
+
 @app.route('/atm')  # Automated teller machine
 def atm_def():
     return render_template('atm.html')
