@@ -3,159 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Управление механиками и машинами инкассации</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../static/admincss.css">
+    <title>Администрирование</title>
+    <link rel="stylesheet" href="/static/admincss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="sidebar">
-        <div class="menu-item"><a href="../maps/gm.html">Карты</a></div>
-        <div class="menu-item"><a href="../atms/atm.html">Банкоматы</a></div>
+        <a href="/atm">Банкоматы</a>
+        <a href="/maps">Карты</a>
     </div>
-    <div class="content">
-        <h1>Управление механиками и машинами инкассации</h1>
-        <div class="table-section">
+    <main>
+        <div class="filter">
             <h2>Механики</h2>
-            <button id="addMechanicBtn" onclick="toggleMechanicForm()">Добавить механика</button>
-            <form id="mechanicForm" style="display: none;">
-                <label for="mechanicName">Имя:</label>
-                <input type="text" id="mechanicName" required>
-                <label for="mechanicAge">Возраст:</label>
-                <input type="number" id="mechanicAge" required>
-                <button type="button" onclick="addMechanic()">Добавить механика</button>
-                <button type="button" onclick="toggleMechanicForm()">Отмена</button>
-            </form>
+        </div>
+        <div class="table-container">
             <table id="mechanicsTable">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Имя</th>
                         <th>Возраст</th>
                         <th>Действие</th>
                     </tr>
                 </thead>
-                <tbody id="mechanicsTbody">
-                    {% for row in mechanics %}
-                    <tr>
-                        <td>{{ row.name }}</td>
-                        <td>{{ row.age }}</td>
-                        <td><button onclick="deleteMechanic(this, '{{ row.name }}', {{ row.age }})">Удалить</button></td>
-                    </tr>
-                    {% endfor %}
+                <tbody>
+                    <!-- Данные будут загружены сюда -->
                 </tbody>
             </table>
-        </div>
-        <div class="table-section">
-            <h2>Машины инкассации</h2>
-            <button id="addCarBtn" onclick="toggleCarForm()">Добавить машину инкассации</button>
-            <form id="carForm" style="display: none;">
-                <label for="carName">Марка:</label>
-                <input type="text" id="carName" required>
-                <label for="carPlate">Номер машины:</label>
-                <input type="text" id="carPlate" required>
-                <button type="button" onclick="addCar()">Добавить машину</button>
-                <button type="button" onclick="toggleCarForm()">Отмена</button>
+            <div class="pagination">
+                <button id="prevMechanicsPage" disabled>Предыдущая</button>
+                <span id="mechanicsPageInfo"></span>
+                <button id="nextMechanicsPage">Следующая</button>
+            </div>
+            <button id="addMechanicButton">Добавить механика</button>
+            <form id="addMechanicForm" style="display:none;">
+                <label for="mechanicName">Имя:</label>
+                <input type="text" id="mechanicName" name="mechanicName" required>
+                <label for="mechanicAge">Возраст:</label>
+                <input type="number" id="mechanicAge" name="mechanicAge" required>
+                <button type="submit">Создать</button>
+                <button type="button" id="cancelMechanicForm">Отмена</button>
             </form>
+        </div>
+        <div class="filter">
+            <h2>Машины инкассации</h2>
+        </div>
+        <div class="table-container">
             <table id="carsTable">
                 <thead>
                     <tr>
-                        <th>Марка</th>
-                        <th>Номер машины</th>
+                        <th>ID</th>
+                        <th>Имя</th>
+                        <th>Гос. номер</th>
                         <th>Действие</th>
                     </tr>
                 </thead>
-                <tbody id="carsTbody">
-                    {% for row in cars %}
-                    <tr>
-                        <td>{{ row.name }}</td>
-                        <td>{{ row.number }}</td>
-                        <td><button onclick="deleteCar(this, '{{ row.name }}', '{{ row.number }}')">Удалить</button></td>
-                    </tr>
-                    {% endfor %}
+                <tbody>
+                    <!-- Данные будут загружены сюда -->
                 </tbody>
             </table>
+            <div class="pagination">
+                <button id="prevCarsPage" disabled>Предыдущая</button>
+                <span id="carsPageInfo"></span>
+                <button id="nextCarsPage">Следующая</button>
+            </div>
+            <button id="addCarButton">Добавить машину инкассации</button>
+            <form id="addCarForm" style="display:none;">
+                <label for="carName">Имя:</label>
+                <input type="text" id="carName" name="carName" required>
+                <label for="carPlate">Гос. номер:</label>
+                <input type="text" id="carPlate" name="carPlate" required>
+                <button type="submit">Создать</button>
+                <button type="button" id="cancelCarForm">Отмена</button>
+            </form>
         </div>
-    </div>
-    <script>
-        function toggleMechanicForm() {
-            const form = document.getElementById('mechanicForm');
-            form.style.display = form.style.display === 'none' ? 'block' : 'none';
-        }
-        function toggleCarForm() {
-            const form = document.getElementById('carForm');
-            form.style.display = form.style.display === 'none' ? 'block' : 'none';
-        }
-        function addMechanic() {
-            const name = document.getElementById('mechanicName').value;
-            const age = document.getElementById('mechanicAge').value;
-            fetch('/save_mechanic', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, age })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const tbody = document.getElementById('mechanicsTbody');
-                    const row = tbody.insertRow();
-                    row.innerHTML = `<td>${name}</td><td>${age}</td><td><button onclick="deleteMechanic(this, '${name}', ${age})">Удалить</button></td>`;
-                    toggleMechanicForm();
-                }
-            });
-        }
-        function addCar() {
-            const name = document.getElementById('carName').value;
-            const plate = document.getElementById('carPlate').value;
-            fetch('/save_car', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, plate })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const tbody = document.getElementById('carsTbody');
-                    const row = tbody.insertRow();
-                    row.innerHTML = `<td>${name}</td><td>${plate}</td><td><button onclick="deleteCar(this, '${name}', '${plate}')">Удалить</button></td>`;
-                    toggleCarForm();
-                }
-            });
-        }
-        function deleteMechanic(button, name, age) {
-            fetch('/delete_mechanic', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, age })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const row = button.parentNode.parentNode; // Получаем строку
-                    row.parentNode.removeChild(row); // Удаляем строку из таблицы
-                }
-            });
-        }
-        function deleteCar(button, name, plate) {
-            fetch('/delete_car', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, plate })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const row = button.parentNode.parentNode; // Получаем строку
-                    row.parentNode.removeChild(row); // Удаляем строку из таблицы
-                }
-            });
-        }
-    </script>
+    </main>
+    <script src="/static/adminscripts.js"></script>
 </body>
 </html>

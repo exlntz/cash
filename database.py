@@ -77,8 +77,18 @@ incass_non_critical_errors.append(non_critical_errors[0])
 service_non_critical_errors.extend(non_critical_errors[1:])
 
 print(non_critical_errors)
+print()
 print(incass_non_critical_errors)
+print()
 print(service_non_critical_errors)
+print()
+print(incass_critical_errors)
+print()
+print(all_errors)
+print()
+print(critical_errors)
+print()
+print(service_critical_errors)
 
 
 

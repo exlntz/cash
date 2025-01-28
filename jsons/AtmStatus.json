@@ -1,412 +1,402 @@
 {
     "Банкомат1": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат10": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат100": {
-        "address": "123213",
-        "askfor": "None",
-        "coords": "123",
-        "lvl": 0
-    },
-    "Банкомат101": {
-        "address": "123",
-        "askfor": "None",
-        "coords": "123",
-        "lvl": 0
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат11": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат12": {
-        "askfor": "service",
-        "lvl": 2
+        "lvl": 2,
+        "askfor": "service"
     },
     "Банкомат13": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат14": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат15": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат16": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат17": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат18": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат19": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат2": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат20": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат21": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат22": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат23": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат24": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат25": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат26": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат27": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат28": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат29": {
-        "askfor": "service",
-        "lvl": 2
+        "lvl": 2,
+        "askfor": "service"
     },
     "Банкомат3": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат30": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат31": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат32": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат33": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат34": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат35": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат36": {
-        "address": "123",
-        "askfor": "None",
-        "coords": "123",
-        "lvl": 0
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат37": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат38": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат39": {
-        "askfor": "service",
-        "lvl": 2
+        "lvl": 2,
+        "askfor": "service"
     },
     "Банкомат4": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат40": {
-        "askfor": "service",
-        "lvl": 2
+        "lvl": 2,
+        "askfor": "service"
     },
     "Банкомат41": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат42": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат43": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат44": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат45": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат46": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат47": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат48": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат49": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат5": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат50": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат51": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат52": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат53": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат54": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат55": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат56": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат57": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат58": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат59": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат6": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат60": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат61": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат62": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат63": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат64": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат65": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат66": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат67": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат68": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат69": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат7": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат70": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат71": {
-        "askfor": "service",
-        "lvl": 2
+        "lvl": 2,
+        "askfor": "service"
     },
     "Банкомат72": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат73": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат74": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат75": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат76": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат77": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат78": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат79": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат8": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат80": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат81": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат82": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат83": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат84": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат85": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат86": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат87": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат88": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат89": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат9": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат90": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат91": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат92": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат93": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат94": {
-        "askfor": "incass",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "incass"
     },
     "Банкомат95": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     },
     "Банкомат96": {
-        "askfor": "service",
-        "lvl": 2
+        "lvl": 2,
+        "askfor": "service"
     },
     "Банкомат97": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат98": {
-        "askfor": "None",
-        "lvl": 0
+        "lvl": 0,
+        "askfor": "None"
     },
     "Банкомат99": {
-        "askfor": "service",
-        "lvl": 1
+        "lvl": 1,
+        "askfor": "service"
     }
 }
