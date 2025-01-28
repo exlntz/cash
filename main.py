@@ -8,19 +8,19 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/home')
 def home_def():
-    return render_template('home/home.html')
+    return render_template('home.html')
 
 @app.route('/atm')  # Automated teller machine
 def atm_def():
-    return render_template('atms/atm.html')
+    return render_template('atm.html')
 
 @app.route('/maps')
 def maps_def():
-    return render_template('maps/maps.html')
+    return render_template('maps.html')
 
 @app.route('/admin')
 def admin_def():
-    return render_template('admin/admin.html')
+    return render_template('admin.html')
 
 @app.route('/get_atm_data')
 def get_atm_data():
