@@ -1,0 +1,41 @@
+body {
+    font-size: 1rem;
+}
+
+.header__img {
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    border: none;
+    padding: 10px 0;
+}
+
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+}
