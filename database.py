@@ -11,10 +11,16 @@ event_type=result['EventType'].tolist()
 time=result['Timestamp'].tolist()
 AtmID=result['DeviceID'].tolist()
 value=result['Value'].tolist()
+details=result['Details'].tolist()
 first_time=list(map(int,time[0][0:10].split('-')))
 start_date=datetime.date(first_time[0],first_time[1],first_time[2])
 errors_list=[]
 data={''}
+
+date=datetime.datetime.strptime(time[0], '%Y-%m-%d %H:%M:%S')
+date2=datetime.datetime.strptime(time[1], '%Y-%m-%d %H:%M:%S')
+date3=date=datetime.datetime.strptime(time[2], '%Y-%m-%d %H:%M:%S')
+
 
 # for x in value:
 #     if ('ОШИБКА' or 'НЕ РАБОТАЕТ') in x.upper():
@@ -190,6 +196,7 @@ repair_needs['errors']=errorsLIST
 repair_needs['non_errors']=non_errorsLIST
 with open('jsons/atm_data.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(repair_needs, indent=4, ensure_ascii=False))
+print(details[4769])
 
 
 AtmStatus={}
@@ -217,3 +224,36 @@ for Atm in sorted(AtmID):
             AtmStatus[key]=value
 with open('jsons/AtmStatus.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(AtmStatus, indent=4, ensure_ascii=False))
+
+
+AtmWorkingTimePercent={}
+for Atm in sorted(AtmID):
+    flag=0
+    i=0
+    count_OnStatus=0
+    count_OffStatus=0
+    date_start=''
+    date_end=''
+    for event in details:
+        if event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==0:
+            date_start=datetime.datetime.strptime(time[i], '%Y-%m-%d %H:%M:%S')
+            flag=1
+        elif event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==1:
+            date_end=datetime.datetime.strptime(time[i], '%Y-%m-%d %H:%M:%S')
+            delta=(date_end-date_start).total_seconds()
+            count_OnStatus=count_OnStatus+delta
+            flag=2
+        if event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==2:
+            date_start=datetime.datetime.strptime(time[i], '%Y-%m-%d %H:%M:%S')
+            delta = (date_start - date_end).total_seconds()
+            count_OffStatus=count_OffStatus+delta
+            flag=1
+        i+=1
+    if (count_OnStatus+count_OffStatus)!=0:
+        AtmWorkingTimePercent[Atm]={'timeON' : count_OnStatus, 'timeOFF' : count_OffStatus, 'Percent' : round((count_OnStatus/(count_OnStatus+count_OffStatus))*100)}
+    else:
+        AtmWorkingTimePercent[Atm] = {'Percent': 100}
+
+
+with open('jsons/AtmWorkingTimePercent.json', 'w', encoding='utf-8') as file:
+    file.write(json.dumps(AtmWorkingTimePercent, indent=4, ensure_ascii=False))
