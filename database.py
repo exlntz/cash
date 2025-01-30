@@ -11,6 +11,7 @@ event_type=result['EventType'].tolist()
 time=result['Timestamp'].tolist()
 AtmID=result['DeviceID'].tolist()
 value=result['Value'].tolist()
+value2=value
 details=result['Details'].tolist()
 first_time=list(map(int,time[0][0:10].split('-')))
 start_date=datetime.date(first_time[0],first_time[1],first_time[2])
@@ -97,19 +98,19 @@ incass_non_critical_errors.append(non_critical_errors[0])
 
 service_non_critical_errors.extend(non_critical_errors[1:])
 
-print(non_critical_errors)
-print()
-print(incass_non_critical_errors)
-print()
-print(service_non_critical_errors)
-print()
-print(incass_critical_errors)
-print()
-print(all_errors)
-print()
-print(critical_errors)
-print()
-print(service_critical_errors)
+# print(non_critical_errors)
+# print()
+# print(incass_non_critical_errors)
+# print()
+# print(service_non_critical_errors)
+# print()
+# print(incass_critical_errors)
+# print()
+# print(all_errors)
+# print()
+# print(critical_errors)
+# print()
+# print(service_critical_errors)
 
 
 
@@ -159,7 +160,7 @@ while k<lastcount:
     start_date=datetime.date(firsttime[0],firsttime[1],firsttime[2])
     week+=1
 monthdata[('month'+str(monthcount))]=weekEndData
-print(monthdata)
+
 with open('jsons/atm_errors_data.json', 'a', encoding='utf-8') as file:
     file.write(json.dumps(monthdata, indent=4, ensure_ascii=False))
 #print(all_errors)
@@ -196,7 +197,7 @@ repair_needs['errors']=errorsLIST
 repair_needs['non_errors']=non_errorsLIST
 with open('jsons/atm_data.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(repair_needs, indent=4, ensure_ascii=False))
-print(details[4769])
+
 
 
 AtmStatus={}
@@ -225,30 +226,43 @@ for Atm in sorted(AtmID):
 with open('jsons/AtmStatus.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(AtmStatus, indent=4, ensure_ascii=False))
 
-
+print(value)
 AtmWorkingTimePercent={}
 for Atm in sorted(AtmID):
     flag=0
-    i=0
+    k=0
     count_OnStatus=0
     count_OffStatus=0
-    date_start=''
+    date_start=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
     date_end=''
     for event in details:
-        if event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==0:
-            date_start=datetime.datetime.strptime(time[i], '%Y-%m-%d %H:%M:%S')
-            flag=1
-        elif event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==1:
-            date_end=datetime.datetime.strptime(time[i], '%Y-%m-%d %H:%M:%S')
-            delta=(date_end-date_start).total_seconds()
-            count_OnStatus=count_OnStatus+delta
+        x=value2[k]
+        if event[:31]==('Состояние устройства Банкомат'+Atm[8:]) and x=='Закрыто' and flag==0:
+            date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
+            delta = (date_end - date_start).total_seconds()
+            count_OnStatus = count_OnStatus + delta
+            date_start=date_end
             flag=2
-        if event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==2:
-            date_start=datetime.datetime.strptime(time[i], '%Y-%m-%d %H:%M:%S')
-            delta = (date_start - date_end).total_seconds()
-            count_OffStatus=count_OffStatus+delta
+        elif event[:31]==('Состояние устройства Банкомат'+Atm[8:]) and x=='Открыто' and flag==0:
+            date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
+            delta = (date_end - date_start).total_seconds()
+            count_OffStatus = count_OffStatus + delta
+            date_start=date_end
             flag=1
-        i+=1
+
+        elif event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==1:
+            date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
+            delta=(date_end-date_start).total_seconds()
+            date_start = date_end
+            count_OffStatus=count_OffStatus+delta
+            flag=2
+        elif event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==2:
+            date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
+            delta = (date_end - date_start).total_seconds()
+            date_start = date_end
+            count_OnStatus=count_OnStatus+delta
+            flag=1
+        k+=1
     if (count_OnStatus+count_OffStatus)!=0:
         AtmWorkingTimePercent[Atm]={'timeON' : count_OnStatus, 'timeOFF' : count_OffStatus, 'Percent' : round((count_OnStatus/(count_OnStatus+count_OffStatus))*100)}
     else:
