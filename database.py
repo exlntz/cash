@@ -237,32 +237,26 @@ for Atm in sorted(AtmID):
     date_end=''
     for event in details:
         x=value2[k]
-        if event[:31]==('Состояние устройства Банкомат'+Atm[8:]) and x=='Закрыто' and flag==0:
+        if event[:31]==('Состояние устройства Банкомат'+Atm[8:]) and x=='Закрыто':
             date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
             delta = (date_end - date_start).total_seconds()
             count_OnStatus = count_OnStatus + delta
             date_start=date_end
             flag=2
-        elif event[:31]==('Состояние устройства Банкомат'+Atm[8:]) and x=='Открыто' and flag==0:
+        elif event[:31]==('Состояние устройства Банкомат'+Atm[8:]) and x=='Открыто':
             date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
             delta = (date_end - date_start).total_seconds()
             count_OffStatus = count_OffStatus + delta
             date_start=date_end
             flag=1
-
-        elif event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==1:
-            date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
-            delta=(date_end-date_start).total_seconds()
-            date_start = date_end
-            count_OffStatus=count_OffStatus+delta
-            flag=2
-        elif event[:31]=='Состояние устройства Банкомат'+Atm[8:] and flag==2:
-            date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
-            delta = (date_end - date_start).total_seconds()
-            date_start = date_end
-            count_OnStatus=count_OnStatus+delta
-            flag=1
         k+=1
+    date_end=datetime.datetime.strptime(time[-1], '%Y-%m-%d %H:%M:%S')
+    delta = (date_end - date_start).total_seconds()
+    if flag<=1:
+
+        count_OnStatus=count_OnStatus + delta
+    else:
+        count_OffStatus = count_OffStatus + delta
     if (count_OnStatus+count_OffStatus)!=0:
         AtmWorkingTimePercent[Atm]={'timeON' : count_OnStatus, 'timeOFF' : count_OffStatus, 'Percent' : round((count_OnStatus/(count_OnStatus+count_OffStatus))*100)}
     else:
