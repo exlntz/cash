@@ -1,0 +1,2512 @@
+{
+    "week1": {
+        "Банкомат1": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат10": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат100": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат11": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат12": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат13": {
+            "timeON": 160680.0,
+            "timeOFF": 99172.0,
+            "Percent": 62
+        },
+        "Банкомат14": {
+            "timeON": 255565.0,
+            "timeOFF": 4287.0,
+            "Percent": 98
+        },
+        "Банкомат15": {
+            "timeON": 244259.0,
+            "timeOFF": 15593.0,
+            "Percent": 94
+        },
+        "Банкомат16": {
+            "timeON": 43388.0,
+            "timeOFF": 216464.0,
+            "Percent": 17
+        },
+        "Банкомат17": {
+            "timeON": 140541.0,
+            "timeOFF": 119311.0,
+            "Percent": 54
+        },
+        "Банкомат18": {
+            "timeON": 146484.0,
+            "timeOFF": 113368.0,
+            "Percent": 56
+        },
+        "Банкомат19": {
+            "timeON": 176452.0,
+            "timeOFF": 83400.0,
+            "Percent": 68
+        },
+        "Банкомат2": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат20": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат21": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат22": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат23": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат24": {
+            "timeON": 36226.0,
+            "timeOFF": 223626.0,
+            "Percent": 14
+        },
+        "Банкомат25": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат26": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат27": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат28": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат29": {
+            "timeON": 66546.0,
+            "timeOFF": 193306.0,
+            "Percent": 26
+        },
+        "Банкомат3": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат30": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат31": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат32": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат33": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат34": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат35": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат36": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат37": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат38": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат39": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат4": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат40": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат41": {
+            "timeON": 100590.0,
+            "timeOFF": 159262.0,
+            "Percent": 39
+        },
+        "Банкомат42": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат43": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат44": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат45": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат46": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат47": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат48": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат49": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат5": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат50": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат51": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат52": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат53": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат54": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат55": {
+            "timeON": 170374.0,
+            "timeOFF": 89478.0,
+            "Percent": 66
+        },
+        "Банкомат56": {
+            "timeON": 123975.0,
+            "timeOFF": 135877.0,
+            "Percent": 48
+        },
+        "Банкомат57": {
+            "timeON": 157853.0,
+            "timeOFF": 101999.0,
+            "Percent": 61
+        },
+        "Банкомат58": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат59": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат6": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат60": {
+            "timeON": 32757.0,
+            "timeOFF": 227095.0,
+            "Percent": 13
+        },
+        "Банкомат61": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат62": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат63": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат64": {
+            "timeON": 128989.0,
+            "timeOFF": 130863.0,
+            "Percent": 50
+        },
+        "Банкомат65": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат66": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат67": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат68": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат69": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат7": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат70": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат71": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат72": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат73": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат74": {
+            "timeON": 68090.0,
+            "timeOFF": 191762.0,
+            "Percent": 26
+        },
+        "Банкомат75": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат76": {
+            "timeON": 35863.0,
+            "timeOFF": 223989.0,
+            "Percent": 14
+        },
+        "Банкомат77": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат78": {
+            "timeON": 85991.0,
+            "timeOFF": 173861.0,
+            "Percent": 33
+        },
+        "Банкомат79": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат8": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат80": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат81": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат82": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат83": {
+            "timeON": 17566.0,
+            "timeOFF": 242286.0,
+            "Percent": 7
+        },
+        "Банкомат84": {
+            "timeON": 56338.0,
+            "timeOFF": 203514.0,
+            "Percent": 22
+        },
+        "Банкомат85": {
+            "timeON": 162366.0,
+            "timeOFF": 97486.0,
+            "Percent": 62
+        },
+        "Банкомат86": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат87": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат88": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат89": {
+            "timeON": 201790.0,
+            "timeOFF": 58062.0,
+            "Percent": 78
+        },
+        "Банкомат9": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат90": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат91": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат92": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат93": {
+            "timeON": 62472.0,
+            "timeOFF": 197380.0,
+            "Percent": 24
+        },
+        "Банкомат94": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат95": {
+            "timeON": 43741.0,
+            "timeOFF": 216111.0,
+            "Percent": 17
+        },
+        "Банкомат96": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат97": {
+            "timeON": 86621.0,
+            "timeOFF": 173231.0,
+            "Percent": 33
+        },
+        "Банкомат98": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат99": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        }
+    },
+    "week2": {
+        "Банкомат1": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат10": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат100": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат11": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат12": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат13": {
+            "timeON": 160680.0,
+            "timeOFF": 99172.0,
+            "Percent": 62
+        },
+        "Банкомат14": {
+            "timeON": 255565.0,
+            "timeOFF": 4287.0,
+            "Percent": 98
+        },
+        "Банкомат15": {
+            "timeON": 244259.0,
+            "timeOFF": 15593.0,
+            "Percent": 94
+        },
+        "Банкомат16": {
+            "timeON": 43388.0,
+            "timeOFF": 216464.0,
+            "Percent": 17
+        },
+        "Банкомат17": {
+            "timeON": 140541.0,
+            "timeOFF": 119311.0,
+            "Percent": 54
+        },
+        "Банкомат18": {
+            "timeON": 146484.0,
+            "timeOFF": 113368.0,
+            "Percent": 56
+        },
+        "Банкомат19": {
+            "timeON": 176452.0,
+            "timeOFF": 83400.0,
+            "Percent": 68
+        },
+        "Банкомат2": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат20": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат21": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат22": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат23": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат24": {
+            "timeON": 36226.0,
+            "timeOFF": 223626.0,
+            "Percent": 14
+        },
+        "Банкомат25": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат26": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат27": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат28": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат29": {
+            "timeON": 66546.0,
+            "timeOFF": 193306.0,
+            "Percent": 26
+        },
+        "Банкомат3": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат30": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат31": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат32": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат33": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат34": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат35": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат36": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат37": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат38": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат39": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат4": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат40": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат41": {
+            "timeON": 100590.0,
+            "timeOFF": 159262.0,
+            "Percent": 39
+        },
+        "Банкомат42": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат43": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат44": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат45": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат46": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат47": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат48": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат49": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат5": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат50": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат51": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат52": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат53": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат54": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат55": {
+            "timeON": 170374.0,
+            "timeOFF": 89478.0,
+            "Percent": 66
+        },
+        "Банкомат56": {
+            "timeON": 123975.0,
+            "timeOFF": 135877.0,
+            "Percent": 48
+        },
+        "Банкомат57": {
+            "timeON": 157853.0,
+            "timeOFF": 101999.0,
+            "Percent": 61
+        },
+        "Банкомат58": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат59": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат6": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат60": {
+            "timeON": 32757.0,
+            "timeOFF": 227095.0,
+            "Percent": 13
+        },
+        "Банкомат61": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат62": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат63": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат64": {
+            "timeON": 128989.0,
+            "timeOFF": 130863.0,
+            "Percent": 50
+        },
+        "Банкомат65": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат66": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат67": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат68": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат69": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат7": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат70": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат71": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат72": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат73": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат74": {
+            "timeON": 68090.0,
+            "timeOFF": 191762.0,
+            "Percent": 26
+        },
+        "Банкомат75": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат76": {
+            "timeON": 35863.0,
+            "timeOFF": 223989.0,
+            "Percent": 14
+        },
+        "Банкомат77": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат78": {
+            "timeON": 85991.0,
+            "timeOFF": 173861.0,
+            "Percent": 33
+        },
+        "Банкомат79": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат8": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат80": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат81": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат82": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат83": {
+            "timeON": 17566.0,
+            "timeOFF": 242286.0,
+            "Percent": 7
+        },
+        "Банкомат84": {
+            "timeON": 56338.0,
+            "timeOFF": 203514.0,
+            "Percent": 22
+        },
+        "Банкомат85": {
+            "timeON": 162366.0,
+            "timeOFF": 97486.0,
+            "Percent": 62
+        },
+        "Банкомат86": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат87": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат88": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат89": {
+            "timeON": 201790.0,
+            "timeOFF": 58062.0,
+            "Percent": 78
+        },
+        "Банкомат9": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат90": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат91": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат92": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат93": {
+            "timeON": 62472.0,
+            "timeOFF": 197380.0,
+            "Percent": 24
+        },
+        "Банкомат94": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат95": {
+            "timeON": 43741.0,
+            "timeOFF": 216111.0,
+            "Percent": 17
+        },
+        "Банкомат96": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат97": {
+            "timeON": 86621.0,
+            "timeOFF": 173231.0,
+            "Percent": 33
+        },
+        "Банкомат98": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат99": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        }
+    },
+    "week3": {
+        "Банкомат1": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат10": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат100": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат11": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат12": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат13": {
+            "timeON": 160680.0,
+            "timeOFF": 99172.0,
+            "Percent": 62
+        },
+        "Банкомат14": {
+            "timeON": 255565.0,
+            "timeOFF": 4287.0,
+            "Percent": 98
+        },
+        "Банкомат15": {
+            "timeON": 244259.0,
+            "timeOFF": 15593.0,
+            "Percent": 94
+        },
+        "Банкомат16": {
+            "timeON": 43388.0,
+            "timeOFF": 216464.0,
+            "Percent": 17
+        },
+        "Банкомат17": {
+            "timeON": 140541.0,
+            "timeOFF": 119311.0,
+            "Percent": 54
+        },
+        "Банкомат18": {
+            "timeON": 146484.0,
+            "timeOFF": 113368.0,
+            "Percent": 56
+        },
+        "Банкомат19": {
+            "timeON": 176452.0,
+            "timeOFF": 83400.0,
+            "Percent": 68
+        },
+        "Банкомат2": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат20": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат21": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат22": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат23": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат24": {
+            "timeON": 36226.0,
+            "timeOFF": 223626.0,
+            "Percent": 14
+        },
+        "Банкомат25": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат26": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат27": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат28": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат29": {
+            "timeON": 66546.0,
+            "timeOFF": 193306.0,
+            "Percent": 26
+        },
+        "Банкомат3": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат30": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат31": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат32": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат33": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат34": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат35": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат36": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат37": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат38": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат39": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат4": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат40": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат41": {
+            "timeON": 100590.0,
+            "timeOFF": 159262.0,
+            "Percent": 39
+        },
+        "Банкомат42": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат43": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат44": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат45": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат46": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат47": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат48": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат49": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат5": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат50": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат51": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат52": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат53": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат54": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат55": {
+            "timeON": 170374.0,
+            "timeOFF": 89478.0,
+            "Percent": 66
+        },
+        "Банкомат56": {
+            "timeON": 123975.0,
+            "timeOFF": 135877.0,
+            "Percent": 48
+        },
+        "Банкомат57": {
+            "timeON": 157853.0,
+            "timeOFF": 101999.0,
+            "Percent": 61
+        },
+        "Банкомат58": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат59": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат6": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат60": {
+            "timeON": 32757.0,
+            "timeOFF": 227095.0,
+            "Percent": 13
+        },
+        "Банкомат61": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат62": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат63": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат64": {
+            "timeON": 128989.0,
+            "timeOFF": 130863.0,
+            "Percent": 50
+        },
+        "Банкомат65": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат66": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат67": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат68": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат69": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат7": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат70": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат71": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат72": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат73": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат74": {
+            "timeON": 68090.0,
+            "timeOFF": 191762.0,
+            "Percent": 26
+        },
+        "Банкомат75": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат76": {
+            "timeON": 35863.0,
+            "timeOFF": 223989.0,
+            "Percent": 14
+        },
+        "Банкомат77": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат78": {
+            "timeON": 85991.0,
+            "timeOFF": 173861.0,
+            "Percent": 33
+        },
+        "Банкомат79": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат8": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат80": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат81": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат82": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат83": {
+            "timeON": 17566.0,
+            "timeOFF": 242286.0,
+            "Percent": 7
+        },
+        "Банкомат84": {
+            "timeON": 56338.0,
+            "timeOFF": 203514.0,
+            "Percent": 22
+        },
+        "Банкомат85": {
+            "timeON": 162366.0,
+            "timeOFF": 97486.0,
+            "Percent": 62
+        },
+        "Банкомат86": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат87": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат88": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат89": {
+            "timeON": 201790.0,
+            "timeOFF": 58062.0,
+            "Percent": 78
+        },
+        "Банкомат9": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат90": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат91": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат92": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат93": {
+            "timeON": 62472.0,
+            "timeOFF": 197380.0,
+            "Percent": 24
+        },
+        "Банкомат94": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат95": {
+            "timeON": 43741.0,
+            "timeOFF": 216111.0,
+            "Percent": 17
+        },
+        "Банкомат96": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат97": {
+            "timeON": 86621.0,
+            "timeOFF": 173231.0,
+            "Percent": 33
+        },
+        "Банкомат98": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат99": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        }
+    },
+    "week4": {
+        "Банкомат1": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат10": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат100": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат11": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат12": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат13": {
+            "timeON": 160680.0,
+            "timeOFF": 99172.0,
+            "Percent": 62
+        },
+        "Банкомат14": {
+            "timeON": 255565.0,
+            "timeOFF": 4287.0,
+            "Percent": 98
+        },
+        "Банкомат15": {
+            "timeON": 244259.0,
+            "timeOFF": 15593.0,
+            "Percent": 94
+        },
+        "Банкомат16": {
+            "timeON": 43388.0,
+            "timeOFF": 216464.0,
+            "Percent": 17
+        },
+        "Банкомат17": {
+            "timeON": 140541.0,
+            "timeOFF": 119311.0,
+            "Percent": 54
+        },
+        "Банкомат18": {
+            "timeON": 146484.0,
+            "timeOFF": 113368.0,
+            "Percent": 56
+        },
+        "Банкомат19": {
+            "timeON": 176452.0,
+            "timeOFF": 83400.0,
+            "Percent": 68
+        },
+        "Банкомат2": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат20": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат21": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат22": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат23": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат24": {
+            "timeON": 36226.0,
+            "timeOFF": 223626.0,
+            "Percent": 14
+        },
+        "Банкомат25": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат26": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат27": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат28": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат29": {
+            "timeON": 66546.0,
+            "timeOFF": 193306.0,
+            "Percent": 26
+        },
+        "Банкомат3": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат30": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат31": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат32": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат33": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат34": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат35": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат36": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат37": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат38": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат39": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат4": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат40": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат41": {
+            "timeON": 100590.0,
+            "timeOFF": 159262.0,
+            "Percent": 39
+        },
+        "Банкомат42": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат43": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат44": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат45": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат46": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат47": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат48": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат49": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат5": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат50": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат51": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат52": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат53": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат54": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат55": {
+            "timeON": 170374.0,
+            "timeOFF": 89478.0,
+            "Percent": 66
+        },
+        "Банкомат56": {
+            "timeON": 123975.0,
+            "timeOFF": 135877.0,
+            "Percent": 48
+        },
+        "Банкомат57": {
+            "timeON": 157853.0,
+            "timeOFF": 101999.0,
+            "Percent": 61
+        },
+        "Банкомат58": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат59": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат6": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат60": {
+            "timeON": 32757.0,
+            "timeOFF": 227095.0,
+            "Percent": 13
+        },
+        "Банкомат61": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат62": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат63": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат64": {
+            "timeON": 128989.0,
+            "timeOFF": 130863.0,
+            "Percent": 50
+        },
+        "Банкомат65": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат66": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат67": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат68": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат69": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат7": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат70": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат71": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат72": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат73": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат74": {
+            "timeON": 68090.0,
+            "timeOFF": 191762.0,
+            "Percent": 26
+        },
+        "Банкомат75": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат76": {
+            "timeON": 35863.0,
+            "timeOFF": 223989.0,
+            "Percent": 14
+        },
+        "Банкомат77": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат78": {
+            "timeON": 85991.0,
+            "timeOFF": 173861.0,
+            "Percent": 33
+        },
+        "Банкомат79": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат8": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат80": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат81": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат82": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат83": {
+            "timeON": 17566.0,
+            "timeOFF": 242286.0,
+            "Percent": 7
+        },
+        "Банкомат84": {
+            "timeON": 56338.0,
+            "timeOFF": 203514.0,
+            "Percent": 22
+        },
+        "Банкомат85": {
+            "timeON": 162366.0,
+            "timeOFF": 97486.0,
+            "Percent": 62
+        },
+        "Банкомат86": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат87": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат88": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат89": {
+            "timeON": 201790.0,
+            "timeOFF": 58062.0,
+            "Percent": 78
+        },
+        "Банкомат9": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат90": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат91": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат92": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат93": {
+            "timeON": 62472.0,
+            "timeOFF": 197380.0,
+            "Percent": 24
+        },
+        "Банкомат94": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат95": {
+            "timeON": 43741.0,
+            "timeOFF": 216111.0,
+            "Percent": 17
+        },
+        "Банкомат96": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат97": {
+            "timeON": 86621.0,
+            "timeOFF": 173231.0,
+            "Percent": 33
+        },
+        "Банкомат98": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат99": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        }
+    },
+    "week5": {
+        "Банкомат1": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат10": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат100": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат11": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат12": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат13": {
+            "timeON": 160680.0,
+            "timeOFF": 99172.0,
+            "Percent": 62
+        },
+        "Банкомат14": {
+            "timeON": 255565.0,
+            "timeOFF": 4287.0,
+            "Percent": 98
+        },
+        "Банкомат15": {
+            "timeON": 244259.0,
+            "timeOFF": 15593.0,
+            "Percent": 94
+        },
+        "Банкомат16": {
+            "timeON": 43388.0,
+            "timeOFF": 216464.0,
+            "Percent": 17
+        },
+        "Банкомат17": {
+            "timeON": 140541.0,
+            "timeOFF": 119311.0,
+            "Percent": 54
+        },
+        "Банкомат18": {
+            "timeON": 146484.0,
+            "timeOFF": 113368.0,
+            "Percent": 56
+        },
+        "Банкомат19": {
+            "timeON": 176452.0,
+            "timeOFF": 83400.0,
+            "Percent": 68
+        },
+        "Банкомат2": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат20": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат21": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат22": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат23": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат24": {
+            "timeON": 36226.0,
+            "timeOFF": 223626.0,
+            "Percent": 14
+        },
+        "Банкомат25": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат26": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат27": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат28": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат29": {
+            "timeON": 66546.0,
+            "timeOFF": 193306.0,
+            "Percent": 26
+        },
+        "Банкомат3": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат30": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат31": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат32": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат33": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат34": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат35": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат36": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат37": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат38": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат39": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат4": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат40": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат41": {
+            "timeON": 100590.0,
+            "timeOFF": 159262.0,
+            "Percent": 39
+        },
+        "Банкомат42": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат43": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат44": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат45": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат46": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат47": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат48": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат49": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат5": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат50": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат51": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат52": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат53": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат54": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат55": {
+            "timeON": 170374.0,
+            "timeOFF": 89478.0,
+            "Percent": 66
+        },
+        "Банкомат56": {
+            "timeON": 123975.0,
+            "timeOFF": 135877.0,
+            "Percent": 48
+        },
+        "Банкомат57": {
+            "timeON": 157853.0,
+            "timeOFF": 101999.0,
+            "Percent": 61
+        },
+        "Банкомат58": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат59": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат6": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат60": {
+            "timeON": 32757.0,
+            "timeOFF": 227095.0,
+            "Percent": 13
+        },
+        "Банкомат61": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат62": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат63": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат64": {
+            "timeON": 128989.0,
+            "timeOFF": 130863.0,
+            "Percent": 50
+        },
+        "Банкомат65": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат66": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат67": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат68": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат69": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат7": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат70": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат71": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат72": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат73": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат74": {
+            "timeON": 68090.0,
+            "timeOFF": 191762.0,
+            "Percent": 26
+        },
+        "Банкомат75": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат76": {
+            "timeON": 35863.0,
+            "timeOFF": 223989.0,
+            "Percent": 14
+        },
+        "Банкомат77": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат78": {
+            "timeON": 85991.0,
+            "timeOFF": 173861.0,
+            "Percent": 33
+        },
+        "Банкомат79": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат8": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат80": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат81": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат82": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат83": {
+            "timeON": 17566.0,
+            "timeOFF": 242286.0,
+            "Percent": 7
+        },
+        "Банкомат84": {
+            "timeON": 56338.0,
+            "timeOFF": 203514.0,
+            "Percent": 22
+        },
+        "Банкомат85": {
+            "timeON": 162366.0,
+            "timeOFF": 97486.0,
+            "Percent": 62
+        },
+        "Банкомат86": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат87": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат88": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат89": {
+            "timeON": 201790.0,
+            "timeOFF": 58062.0,
+            "Percent": 78
+        },
+        "Банкомат9": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат90": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат91": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат92": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат93": {
+            "timeON": 62472.0,
+            "timeOFF": 197380.0,
+            "Percent": 24
+        },
+        "Банкомат94": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        },
+        "Банкомат95": {
+            "timeON": 43741.0,
+            "timeOFF": 216111.0,
+            "Percent": 17
+        },
+        "Банкомат96": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат97": {
+            "timeON": 86621.0,
+            "timeOFF": 173231.0,
+            "Percent": 33
+        },
+        "Банкомат98": {
+            "timeON": 0,
+            "timeOFF": 259852.0,
+            "Percent": 0
+        },
+        "Банкомат99": {
+            "timeON": 259852.0,
+            "timeOFF": 0,
+            "Percent": 100
+        }
+    }
+}

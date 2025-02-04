@@ -114,7 +114,7 @@ service_non_critical_errors.extend(non_critical_errors[1:])
 
 
 
-print(weekindexcount(338,time, int(start_date.weekday())))
+print(weekindexcount(906,time, int(start_date.weekday())))
 last=0
 lastcount=0
 errorlst=[]
@@ -136,8 +136,10 @@ with open('jsons/atm_errors_data.json', 'w', encoding='utf-8') as file:
 
 monthdata={}
 weekEndData={}
+start1_date=start_date
 monthstopcount=monthindexcount(0, time, int(start_date.weekday()))
 monthcount=1
+firsttime1=first_time
 while k<lastcount:
     if k>monthstopcount:
         monthdata[('month'+str(monthcount))]=weekEndData
@@ -228,40 +230,77 @@ with open('jsons/AtmStatus.json', 'w', encoding='utf-8') as file:
 
 print(value)
 AtmWorkingTimePercent={}
+AtmWorkingTimePercentPerWeek={}
+DeltaAtmWork={}
 for Atm in sorted(AtmID):
+    k = 0
+
+    weekcounter=1
     flag=0
-    k=0
+    weekindexcounter = weekindexcount(k, time, start1_date.weekday())
     count_OnStatus=0
     count_OffStatus=0
+    count_OnStatusWeek = 0
+    count_OffStatusWeek = 0
     date_start=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
     date_end=''
     for event in details:
         x=value2[k]
+
         if event[:31]==('Состояние устройства Банкомат'+Atm[8:]) and x=='Закрыто':
             date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
             delta = (date_end - date_start).total_seconds()
             count_OnStatus = count_OnStatus + delta
+            count_OnStatusWeek = count_OnStatusWeek + delta
             date_start=date_end
             flag=2
         elif event[:31]==('Состояние устройства Банкомат'+Atm[8:]) and x=='Открыто':
             date_end=datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
             delta = (date_end - date_start).total_seconds()
             count_OffStatus = count_OffStatus + delta
+            count_OffStatusWeek = count_OffStatusWeek + delta
             date_start=date_end
             flag=1
+        if (count_OnStatus + count_OffStatus) != 0:
+            AtmWorkingTimePercent[Atm] = {'timeON': count_OnStatus, 'timeOFF': count_OffStatus,
+                                          'Percent': round((count_OnStatus / (count_OnStatus + count_OffStatus)) * 100)}
+        if (count_OnStatusWeek + count_OffStatusWeek) != 0:
+            DeltaAtmWork[Atm]={'timeON': count_OnStatusWeek, 'timeOFF': count_OffStatusWeek,
+                                          'Percent': round((count_OnStatusWeek / (count_OnStatusWeek + count_OffStatusWeek)) * 100)}
+
+        if k == weekindexcounter:
+            AtmWorkingTimePercentPerWeek[('week' + str(weekcounter))] = DeltaAtmWork
+            weekcounter += 1
+            firsttime1 = list(map(int, time[k][0:10].split('-')))
+            start1_date = datetime.date(firsttime[0], firsttime[1], firsttime[2])
+            date_start= datetime.datetime.strptime(time[k], '%Y-%m-%d %H:%M:%S')
+            weekindexcounter = weekindexcount(k, time, start_date.weekday())
+            count_OnStatusWeek = 0
+            count_OffStatusWeek = 0
         k+=1
     date_end=datetime.datetime.strptime(time[-1], '%Y-%m-%d %H:%M:%S')
     delta = (date_end - date_start).total_seconds()
+
     if flag<=1:
 
         count_OnStatus=count_OnStatus + delta
+        count_OnStatusWeek = count_OnStatusWeek + delta
     else:
         count_OffStatus = count_OffStatus + delta
-    if (count_OnStatus+count_OffStatus)!=0:
-        AtmWorkingTimePercent[Atm]={'timeON' : count_OnStatus, 'timeOFF' : count_OffStatus, 'Percent' : round((count_OnStatus/(count_OnStatus+count_OffStatus))*100)}
+        count_OffStatusWeek = count_OffStatusWeek + delta
+    if (count_OnStatus + count_OffStatus) != 0:
+        AtmWorkingTimePercent[Atm] = {'timeON': count_OnStatus, 'timeOFF': count_OffStatus,
+                                      'Percent': round((count_OnStatus / (count_OnStatus + count_OffStatus)) * 100)}
+        DeltaAtmWork[Atm] = {'timeON': count_OnStatusWeek, 'timeOFF': count_OffStatusWeek,
+                             'Percent': round((count_OnStatusWeek / (count_OnStatusWeek + count_OffStatusWeek)) * 100)}
     else:
         AtmWorkingTimePercent[Atm] = {'Percent': 100}
+    AtmWorkingTimePercentPerWeek[('week' + str(weekcounter))]=(DeltaAtmWork)
 
 
+
+
+with open('jsons/AtmWorkingTimePercentWeek.json', 'w', encoding='utf-8') as file:
+    file.write(json.dumps(AtmWorkingTimePercentPerWeek, indent=4, ensure_ascii=False))
 with open('jsons/AtmWorkingTimePercent.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(AtmWorkingTimePercent, indent=4, ensure_ascii=False))
