@@ -204,4 +204,60 @@ document.addEventListener('DOMContentLoaded', function() {
         addressInput.value = '';
         coordsInput.value = '';
     }
+
+    // Функция для сортировки таблицы
+    function sortTable(order) {
+        const table = document.getElementById("atmTable");
+        const tbody = table.querySelector("tbody");
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+
+        // Сортируем строки по значению в первом столбце (ID)
+        rows.sort((a, b) => {
+            const idA = parseInt(a.cells[0].textContent); // ID первой строки
+            const idB = parseInt(b.cells[0].textContent); // ID второй строки
+            return order === "ascending" ? idA - idB : idB - idA;
+        });
+
+        // Очищаем tbody и добавляем отсортированные строки
+        tbody.innerHTML = "";
+        rows.forEach(row => tbody.appendChild(row));
+    }
+
+    // Обработчик события для выбора сортировки
+    document.addEventListener("DOMContentLoaded", () => {
+        const sortFilter = document.getElementById("sortFilter");
+
+        // При изменении значения в выпадающем списке
+        sortFilter.addEventListener("change", (event) => {
+            const sortOrder = event.target.value; // "ascending" или "descending"
+            sortTable(sortOrder);
+        });
+    });
+    // Функция для применения цветовой маркировки
+    function applyRowColors() {
+        const rows = document.querySelectorAll("#atmTable tbody tr");
+
+        rows.forEach(row => {
+            const statusCell = row.cells[1].textContent.trim(); // Статус во втором столбце
+            row.classList.remove("green-row", "red-row"); // Удаляем старые классы
+
+            if (statusCell === "Работает") {
+                row.classList.add("green-row");
+            } else if (statusCell === "Не работает") {
+                row.classList.add("red-row");
+            }
+        });
+    }
+
+    // Вызываем функцию при загрузке страницы и после сортировки
+    document.addEventListener("DOMContentLoaded", () => {
+        applyRowColors();
+
+        const sortFilter = document.getElementById("sortFilter");
+        sortFilter.addEventListener("change", () => {
+            const sortOrder = sortFilter.value;
+            sortTable(sortOrder);
+            applyRowColors(); // Применяем цвета после сортировки
+        });
+    });
 });

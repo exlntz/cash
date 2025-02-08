@@ -102,3 +102,12 @@ header {
   .sort-container:hover .sort-menu {
     display: block;
   }
+
+/* Цветовые стили для строк */
+.green-row {
+    background-color: lightgreen;
+}
+
+.red-row {
+    background-color: lightcoral;
+}

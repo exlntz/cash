@@ -1,44 +1,4 @@
 {
-    "Банкомат1": {
-        "askfor": "service",
-        "lvl": 1
-    },
-    "Банкомат10": {
-        "askfor": "service",
-        "lvl": 1
-    },
-    "Банкомат100": {
-        "askfor": "service",
-        "lvl": 1
-    },
-    "Банкомат11": {
-        "askfor": "None",
-        "lvl": 0
-    },
-    "Банкомат12": {
-        "askfor": "service",
-        "lvl": 2
-    },
-    "Банкомат13": {
-        "askfor": "service",
-        "lvl": 1
-    },
-    "Банкомат14": {
-        "askfor": "None",
-        "lvl": 0
-    },
-    "Банкомат15": {
-        "askfor": "None",
-        "lvl": 0
-    },
-    "Банкомат16": {
-        "askfor": "None",
-        "lvl": 0
-    },
-    "Банкомат17": {
-        "askfor": "None",
-        "lvl": 0
-    },
     "Банкомат18": {
         "askfor": "None",
         "lvl": 0
@@ -398,11 +358,5 @@
     "Банкомат99": {
         "askfor": "service",
         "lvl": 1
-    },
-    "Банкомат101": {
-        "lvl": 0,
-        "askfor": "None",
-        "address": "dwdwq",
-        "coords": "dwqdw"
     }
 }
