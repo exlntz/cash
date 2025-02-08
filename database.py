@@ -2,9 +2,11 @@ import pandas as pd
 import datetime
 import json
 
+from ortools.constraint_solver import routing_enums_pb2
+from ortools.constraint_solver import pywrapcp
 from openpyxl.chart.series import attribute_mapping
 
-
+#ВАня ты ЗАЕБАЛ СО СВОИМИ КОМЕНТАМИ
 
 result = pd.read_csv("csvfiles/telemi_events.csv")
 event_type=result['EventType'].tolist()
@@ -56,11 +58,6 @@ def monthindexcount(index0,list, date0):
             k+=1
     return k
 
-print()
-# for s in time:
-#     print(s, s[8:10],k)
-#     k+=1
-
 all_value=set(value)
 all_errors=[]
 for status in all_value:
@@ -98,23 +95,9 @@ incass_non_critical_errors.append(non_critical_errors[0])
 
 service_non_critical_errors.extend(non_critical_errors[1:])
 
-# print(non_critical_errors)
-# print()
-# print(incass_non_critical_errors)
-# print()
-# print(service_non_critical_errors)
-# print()
-# print(incass_critical_errors)
-# print()
-# print(all_errors)
-# print()
-# print(critical_errors)
-# print()
-# print(service_critical_errors)
 
 
 
-print(weekindexcount(906,time, int(start_date.weekday())))
 last=0
 lastcount=0
 errorlst=[]
@@ -124,7 +107,6 @@ for i in event_type:
         last=lastcount
         errorlst.append(i)
     lastcount+=1
-# print(set(errorlst))
 
 
 
@@ -227,7 +209,7 @@ for Atm in sorted(AtmID):
             AtmStatus[key]=value
 with open('jsons/AtmStatus.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(AtmStatus, indent=4, ensure_ascii=False))
-
+    
 print(value)
 AtmWorkingTimePercent={}
 AtmWorkingTimePercentPerWeek={}
@@ -296,8 +278,8 @@ for Atm in sorted(AtmID):
     else:
         AtmWorkingTimePercent[Atm] = {'Percent': 100}
     AtmWorkingTimePercentPerWeek[('week' + str(weekcounter))]=(DeltaAtmWork)
-
-
+    
+make_routes()#делаем маршруты НЕ ТРОГАТЬ
 
 
 with open('jsons/AtmWorkingTimePercentWeek.json', 'w', encoding='utf-8') as file:
