@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalPages = Math.ceil(totalItems / itemsPerPage);
         const pageInfoElement = tableType === 'error' ? errorPageInfo : statusPageInfo;
         pageInfoElement.textContent = `Страница ${currentPage} из ${totalPages}`;
-        
+
         const prevButton = tableType === 'error' ? prevErrorPageButton : prevStatusPageButton;
         const nextButton = tableType === 'error' ? nextErrorPageButton : nextStatusPageButton;
 
