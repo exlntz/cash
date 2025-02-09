@@ -1,8 +1,4 @@
 {
-    "Банкомат18": {
-        "askfor": "None",
-        "lvl": 0
-    },
     "Банкомат19": {
         "askfor": "service",
         "lvl": 1
@@ -19,10 +15,6 @@
         "askfor": "None",
         "lvl": 0
     },
-    "Банкомат22": {
-        "askfor": "None",
-        "lvl": 0
-    },
     "Банкомат23": {
         "askfor": "None",
         "lvl": 0
@@ -34,10 +26,6 @@
     "Банкомат25": {
         "askfor": "None",
         "lvl": 0
-    },
-    "Банкомат26": {
-        "askfor": "service",
-        "lvl": 1
     },
     "Банкомат27": {
         "askfor": "None",
@@ -364,5 +352,17 @@
         "askfor": "None",
         "address": "123",
         "coords": "123"
+    },
+    "Банкомат2487": {
+        "lvl": 0,
+        "askfor": "None",
+        "address": "fcwcwew",
+        "coords": "21122121122123"
+    },
+    "Банкоматcbe7": {
+        "lvl": 0,
+        "askfor": "None",
+        "address": "fewf",
+        "coords": "fwefew"
     }
 }
