@@ -14,7 +14,7 @@ def home_def():
 def about_def():
     return render_template('about.html')
 
-@application.route('/atm')  # Automated teller machine
+@application.route('/atm')
 def atm_def():
     return render_template('atm.html')
 
@@ -55,9 +55,6 @@ def save_cars():
 @application.route('/static/<path:path>')
 def serve_static(path):
     return send_from_directory('static', path)
-
-# Новые маршруты для управления банкоматами
-
 @application.route('/get_atm_data')
 def get_atm_data():
     with open('static/jsons/atm_data.json', 'r', encoding='utf-8') as f:
@@ -75,13 +72,11 @@ def get_atm_working_time_percent():
     with open('static/jsons/AtmWorkingTimePercent.json', 'r', encoding='utf-8') as f:
         atm_working_time_percent = json.load(f)
     return jsonify(atm_working_time_percent)
-
 @application.route('/get_atm_errors_data')
 def get_atm_errors_data():
     with open('static/jsons/atm_errors_data.json', 'r', encoding='utf-8') as f:
         atm_errors_data = json.load(f)
     return jsonify(atm_errors_data)
-
 @application.route('/add_atm', methods=['POST'])
 def add_atm():
     address = request.form.get('address')
@@ -102,29 +97,18 @@ def delete_atm(atm_id):
     atm_status = load_json('AtmStatus.json')
     atm_working_time_percent = load_json('AtmWorkingTimePercent.json')
     atm_errors_data = load_json('atm_errors_data.json')
-    
-    # Удаление из atm_data.json
     for key in ['critical_errors', 'errors', 'non_errors']:
         atm_data[key] = [item for item in atm_data[key] if item['id'] != atm_id]
-    
-    # Удаление из AtmStatus.json
     atm_status.pop(atm_id, None)
-    
-    # Удаление из AtmWorkingTimePercent.json
     atm_working_time_percent.pop(atm_id, None)
-    
-    # Удаление из atm_errors_data.json
     for month in atm_errors_data.values():
         for week in month.values():
             week.pop(atm_id, None)
-    
     save_json(atm_data, 'atm_data.json')
     save_json(atm_status, 'AtmStatus.json')
     save_json(atm_working_time_percent, 'AtmWorkingTimePercent.json')
     save_json(atm_errors_data, 'atm_errors_data.json')
-    
     return jsonify({'success': True}), 200
-
 def load_json(filename):
     with open(os.path.join('static/jsons', filename), 'r', encoding='utf-8') as file:
         return json.load(file)
