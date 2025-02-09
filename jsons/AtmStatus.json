@@ -358,5 +358,11 @@
     "Банкомат99": {
         "askfor": "service",
         "lvl": 1
+    },
+    "Банкоматd152": {
+        "lvl": 0,
+        "askfor": "None",
+        "address": "123",
+        "coords": "123"
     }
 }

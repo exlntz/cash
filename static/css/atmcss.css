@@ -1,113 +1,154 @@
 body {
-    font-size: .875rem;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
 }
 
-.header__img {
-    margin-right: 10px;
+h1 {
+    color: #333;
+    text-align: center;
 }
 
-.feather {
-    width: 16px;
-    height: 16px;
-    vertical-align: text-bottom;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.table-container {
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+tr.critical_errors {
+    background-color: #ffcccc;
+}
+
+tr.errors {
+    background-color: #ffffcc;
+}
+
+tr[data-status="incass"] {
+    background-color: #ffcccc;
+}
+
+tr[data-status="service"] {
+    background-color: #ffff99;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.delete_atm {
+    background-color: #dc3545;
+}
+
+button.delete_atm:hover {
+    background-color: #c82333;
+}
+
+#add_atm_form {
     margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
 }
 
-.pagination {
+#add_atm_form_inner input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: calc(100% - 12px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#add_atm_form_inner button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add_atm_form_inner button:hover {
+    background-color: #218838;
+}
+
+#atm_details {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+canvas {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
     margin-top: 10px;
 }
 
-.filter h2 {
+select {
     margin-bottom: 10px;
+    padding: 5px;
+    width: calc(100% - 12px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.delete-btn {
-    background-color: white;
-    border: 2px solid #007bff;
-    color: #007bff;
-    padding: 6px 12px;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
+.pagination {
     display: flex;
-    align-items: center;
     justify-content: center;
-    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
 }
 
-.delete-btn:hover {
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
     background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
-#addAtmForm .mb-3 {
-    max-width: 400px;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #fff;
-}
-
- .sort-container {
-    position: relative;
-    display: inline-block;
-    margin-top: 10px; /* Отступ для лучшего восприятия */
-  }
-
-  .sort-button {
-    background-color: #007bff;
-    color: white;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-
-  .sort-button:hover {
-    background-color: #0056b3;
-  }
-
-  .sort-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
-
-  .sort-menu a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-  }
-
-  .sort-menu a:hover {
-    background-color: #f0f0f0;
-  }
-
-  .sort-container:hover .sort-menu {
-    display: block;
-  }
-
-/* Цветовые стили для строк */
-.green-row {
-    background-color: lightgreen;
+    transition: background-color 0.3s;
 }
 
-.red-row {
-    background-color: lightcoral;
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }

@@ -3,118 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Администрирование банкоматов</title>
-    <link rel="stylesheet" href="/static/css/atmcss.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Управление банкоматами</title>
+    <link rel="stylesheet" href="static/css/atmcss.css">
 </head>
 <body>
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img class="header__img" src="static/img/turtles.png" alt="черепашки" width="40" height="40">
-            <span class="fs-4">ATM service</span>
-        </a>
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/home" class="nav-link active" aria-current="page">Главная</a></li>
-            <li class="nav-item"><a href="/admin" class="nav-link">Администрирование</a></li>
-            <li class="nav-item"><a href="/atm" class="nav-link">Банкоматы</a></li>
-            <li class="nav-item"><a href="/maps" class="nav-link">Карты</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link">О нас</a></li>
-        </ul>
-    </header>
+    <h1>Управление банкоматами</h1>
 
-    <div class="container-fluid">
-        <main class="col-md-12 ms-sm-auto px-md-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Администрирование банкоматов</h1>
-            </div>
-
-            <div class="filter">
-                <h2>Фильтр ошибок</h2>
-                <select id="errorFilter" class="form-select w-auto">
-                    <option value="all">Все</option>
-                    <option value="errors">Ошибки</option>
-                    <option value="criticalErrors">Критические ошибки</option>
-                </select>
-            </div>
-            <div class="table-container">
-                <table id="errorTable" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Дата - ID</th>
-                            <th>Ошибка</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Данные будут загружены сюда -->
-                    </tbody>
-                </table>
-                <div class="pagination">
-                    <button id="prevErrorPage" class="btn btn-secondary" disabled>Предыдущая</button>
-                    <span id="errorPageInfo"></span>
-                    <button id="nextErrorPage" class="btn btn-secondary">Следующая</button>
-                </div>
-            </div>
-
-            <div class="filter mt-5">
-                <h2>Статус банкоматов</h2>
-            </div>
-
-            <div class="filter">
-                <h2>Сортировка</h2>
-                <select id="sortFilter" class="form-select w-auto">
-                    <option value="ascending">По возрастанию</option>
-                    <option value="descending">По убыванию</option>
-                </select>
-            </div>
-
-            <div class="table-container">
-                <table id="statusTable" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Статус</th>
-                            <th>Действие</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Данные будут загружены сюда -->
-                        <tr>
-                            <td>1</td>
-                            <td>Работает</td>
-                            <td><button class="delete-btn rounded-circle">Удалить</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Не работает</td>
-                            <td><button class="delete-btn rounded-circle">Удалить</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="pagination">
-                    <button id="prevStatusPage" class="btn btn-secondary" disabled>Предыдущая</button>
-                    <span id="statusPageInfo"></span>
-                    <button id="nextStatusPage" class="btn btn-secondary">Следующая</button>
-                </div>
-            </div>
-
-            <div class="d-flex align-items-center mt-3">
-                <button id="addAtmButton" class="btn btn-primary ms-3">Добавить банкомат</button>
-            </div>
-            <form id="addAtmForm" class="mt-3" style="display:none;">
-                <div class="mb-3">
-                    <label for="address" class="form-label">Адрес:</label>
-                    <input type="text" class="form-control" id="address" name="address" required>
-                </div>
-                <div class="mb-3">
-                    <label for="coords" class="form-label">Координаты:</label>
-                    <input type="text" class="form-control" id="coords" name="coords" required>
-                </div>
-                <button type="submit" class="btn btn-success">Сохранить</button>
-                <button type="button" id="cancelAtmForm" class="btn btn-danger">Отмена</button>
-            </form>
-        </main>
+    <!-- Таблица ошибок банкоматов -->
+    <div>
+        <label for="error_filter">Фильтр ошибок:</label>
+        <select id="error_filter">
+            <option value="all">Все</option>
+            <option value="critical_errors">Критические ошибки</option>
+            <option value="errors">Ошибки</option>
+            <option value="non_errors">Не ошибки</option>
+        </select>
+        <table id="atm_errors_table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Время</th>
+                    <th>Сообщение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Данные будут загружены динамически -->
+            </tbody>
+        </table>
+        <div id="errors_pagination" class="pagination"></div>
     </div>
 
-    <script src="/static/js/atmscripts.js"></script>
+    <!-- Таблица статусов банкоматов -->
+    <div>
+        <label for="status_filter">Фильтр статусов:</label>
+        <select id="status_filter">
+            <option value="all">Все</option>
+            <option value="incass">Требуется инкассация</option>
+            <option value="service">Требуется обслуживание</option>
+            <option value="None">Без ошибок</option>
+        </select>
+        <button id="sort_by_id">Сортировать по ID</button>
+        <table id="atm_status_table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Статус</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Данные будут загружены динамически -->
+            </tbody>
+        </table>
+        <div id="status_pagination" class="pagination"></div>
+    </div>
+
+    <!-- Форма добавления банкомата -->
+    <button id="add_atm_button">Добавить банкомат</button>
+    <div id="add_atm_form" style="display:none;">
+        <form id="add_atm_form_inner">
+            <label for="address">Адрес:</label>
+            <input type="text" id="address" name="address">
+            <label for="coords">Координаты:</label>
+            <input type="text" id="coords" name="coords">
+            <button type="submit">Сохранить</button>
+        </form>
+    </div>
+
+    <!-- Окно выбора банкомата -->
+    <label for="atm_selector">Выберите банкомат:</label>
+    <select id="atm_selector">
+        <option value="">Выберите банкомат</option>
+        <!-- Данные будут загружены динамически -->
+    </select>
+    <div id="atm_details" style="display:none;">
+        <p id="current_status"></p>
+        <p id="work_percentage"></p>
+        <canvas id="weekly_errors_chart"></canvas>
+        <canvas id="monthly_errors_chart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="static/js/atmscripts.js"></script>
 </body>
 </html>
