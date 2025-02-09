@@ -112,7 +112,7 @@ for i in event_type:
 
 k=0
 week=1
-with open('jsons/atm_errors_data.json', 'w', encoding='utf-8') as file:
+with open('static/jsons/atm_errors_data.json', 'w', encoding='utf-8') as file:
     file.write('')
 
 
@@ -145,7 +145,7 @@ while k<lastcount:
     week+=1
 monthdata[('month'+str(monthcount))]=weekEndData
 
-with open('jsons/atm_errors_data.json', 'a', encoding='utf-8') as file:
+with open('static/jsons/atm_errors_data.json', 'a', encoding='utf-8') as file:
     file.write(json.dumps(monthdata, indent=4, ensure_ascii=False))
 #print(all_errors)
 repair_needs={}
@@ -179,7 +179,7 @@ for event in value:
 repair_needs['critical_errors']=critical_errorsLIST
 repair_needs['errors']=errorsLIST
 repair_needs['non_errors']=non_errorsLIST
-with open('jsons/atm_data.json', 'w', encoding='utf-8') as file:
+with open('static/jsons/atm_data.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(repair_needs, indent=4, ensure_ascii=False))
 
 
@@ -207,7 +207,7 @@ for Atm in sorted(AtmID):
     for key, value in sorted_AtmStatus:
         if Atm==key:
             AtmStatus[key]=value
-with open('jsons/AtmStatus.json', 'w', encoding='utf-8') as file:
+with open('static/jsons/AtmStatus.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(AtmStatus, indent=4, ensure_ascii=False))
     
 print(value)
@@ -282,7 +282,7 @@ for Atm in sorted(AtmID):
 make_routes()#делаем маршруты НЕ ТРОГАТЬ
 
 
-with open('jsons/AtmWorkingTimePercentWeek.json', 'w', encoding='utf-8') as file:
+with open('static/jsons/AtmWorkingTimePercentWeek.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(AtmWorkingTimePercentPerWeek, indent=4, ensure_ascii=False))
-with open('jsons/AtmWorkingTimePercent.json', 'w', encoding='utf-8') as file:
+with open('static/jsons/AtmWorkingTimePercent.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(AtmWorkingTimePercent, indent=4, ensure_ascii=False))

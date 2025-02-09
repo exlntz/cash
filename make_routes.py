@@ -20,7 +20,7 @@ def create_routes(n_service_cars, m_incass_cars):
     depot_coords = (55.7522, 37.6156)
 
     # Чтение данных из файла
-    with open("jsons/AtmStatus.json", "r", encoding="utf-8") as file:
+    with open("static/jsons/AtmStatus.json", "r", encoding="utf-8") as file:
         atm_data = json.load(file)
 
     # Фильтрация банкоматов по lvl и askfor
@@ -76,7 +76,7 @@ def create_routes(n_service_cars, m_incass_cars):
         "incass_routes": incass_routes
     }
 
-    with open("jsons/routes.json", "w", encoding="utf-8") as file:
+    with open("static/jsons/routes.json", "w", encoding="utf-8") as file:
         json.dump(result, file, ensure_ascii=False, indent=4)
 
     print("Маршруты успешно созданы и сохранены в файл routes.json")

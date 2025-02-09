@@ -1,6 +1,70 @@
+/* Стили для всей страницы */
+body {
+    margin: 0;
+    height: 100vh; /* 100% высоты экрана */
+    display: flex;
+    flex-direction: column; /* Добавлено, чтобы шапка и карта располагались вертикально */
+}
+
+/* Контейнер для кнопок и селекторов */
+.controls-container {
+    display: flex;
+    justify-content: flex-start; /* Выравнивание по левому краю */
+    align-items: center;
+    padding: 10px 20px; /* Меньше padding, чтобы уменьшить пространство */
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 2px -2px gray;
+    z-index: 100;
+}
+
+/* Контейнер для карты */
+#map {
+    flex-grow: 1; /* Карта будет занимать оставшееся пространство */
+    width: 100%;
+    height: calc(100vh - 80px); /* Уменьшаем высоту карты с учетом шапки */
+}
+
+/* Оформление кнопок */
+.btn {
+    width: 200px;
+}
+
+/* Шапка сайта */
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
     background: #fff;
+    box-shadow: 0 4px 2px -2px gray; /* Добавление тени под шапкой */
+}
+
+header .nav-pills {
+    margin-left: 20px;
+}
+
+header .nav-item {
+    padding: 0 10px;
+}
+
+/* Добавляем отступы для формы выбора маршрута */
+h1 {
+    margin-bottom: 20px; /* Расстояние от заголовка до следующих элементов */
+}
+
+label {
+    font-weight: bold;
+}
+
+#routeType, #route {
+    margin-top: 10px;
+    margin-bottom: 20px; /* Добавляем расстояние между селекторами */
+}
+
+#routeButton {
+    margin-top: 20px; /* Добавляем расстояние между кнопкой и селекторами */
+}
+
+/* Убираем лишнее расстояние между кнопками */
+.controls-container .control-item {
+    margin-right: 10px; /* Меньше промежутков между кнопками */
 }

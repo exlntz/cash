@@ -1,15 +1,41 @@
+/* Стили для шапки */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+}
+}
+.header__img {
+    margin-right: 10px;
+}
+.nav-pills .nav-link {
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+.nav-pills .nav-link.active {
+    box-shadow: inset 0 -3px 0 #0056b3;
+}
+
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f4f4f9;
 }
-
 h1 {
     color: #333;
     text-align: center;
+    margin-top: 0;
 }
 
+/* Стили для таблицы */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -17,34 +43,29 @@ table {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
-
 th {
     background-color: #f2f2f2;
     cursor: pointer;
 }
-
 tr.critical_errors {
     background-color: #ffcccc;
 }
-
 tr.errors {
     background-color: #ffffcc;
 }
-
 tr[data-status="incass"] {
     background-color: #ffcccc;
 }
-
 tr[data-status="service"] {
     background-color: #ffff99;
 }
 
+/* Стили для кнопок */
 button {
     padding: 5px 10px;
     margin: 5px;
@@ -55,19 +76,17 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 button:hover {
     background-color: #0056b3;
 }
-
 button.delete_atm {
     background-color: #dc3545;
 }
-
 button.delete_atm:hover {
     background-color: #c82333;
 }
 
+/* Стили для формы добавления банкомата */
 #add_atm_form {
     margin-top: 20px;
     padding: 10px;
@@ -76,7 +95,6 @@ button.delete_atm:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: none;
 }
-
 #add_atm_form_inner input {
     margin-bottom: 10px;
     padding: 5px;
@@ -84,7 +102,6 @@ button.delete_atm:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-
 #add_atm_form_inner button {
     background-color: #28a745;
     color: #fff;
@@ -93,11 +110,11 @@ button.delete_atm:hover {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 #add_atm_form_inner button:hover {
     background-color: #218838;
 }
 
+/* Стили для деталей банкомата */
 #atm_details {
     margin-top: 20px;
     padding: 10px;
@@ -107,6 +124,7 @@ button.delete_atm:hover {
     display: none;
 }
 
+/* Стили для графиков */
 canvas {
     margin-top: 20px;
     width: 100%;
@@ -114,11 +132,11 @@ canvas {
     margin: 0 auto;
 }
 
+/* Стили для фильтров и сортировки */
 label {
     display: block;
     margin-top: 10px;
 }
-
 select {
     margin-bottom: 10px;
     padding: 5px;
@@ -127,12 +145,12 @@ select {
     border-radius: 5px;
 }
 
+/* Стили для пагинации */
 .pagination {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
-
 .pagination button {
     margin: 0 5px;
     padding: 5px 10px;
@@ -143,11 +161,9 @@ select {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 .pagination button:hover {
     background-color: #0056b3;
 }
-
 .pagination button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
