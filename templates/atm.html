@@ -46,7 +46,7 @@
         </table>
         <div id="errors_pagination" class="pagination"></div>
     </div>
-    <h1>Статусы банкоматов</h1>
+
     <!-- Таблица статусов банкоматов -->
     <div>
         <label for="status_filter">Фильтр статусов:</label>
@@ -76,9 +76,9 @@
     <button id="add_atm_button">Добавить банкомат</button>
     <div id="add_atm_form" style="display:none;">
         <form id="add_atm_form_inner">
-            <label for="address">Название банкомата:</label>
+            <label for="address">Адрес:</label>
             <input type="text" id="address" name="address">
-            <label for="coords">Координаты банкомата:</label>
+            <label for="coords">Координаты:</label>
             <input type="text" id="coords" name="coords">
             <button type="submit">Сохранить</button>
         </form>
@@ -97,6 +97,7 @@
         <canvas id="monthly_errors_chart"></canvas>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="static/js/atmscripts.js"></script>
 </body>
 </html>

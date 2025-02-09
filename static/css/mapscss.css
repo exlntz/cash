@@ -35,13 +35,21 @@ header {
     top: 0;
     z-index: 1000;
     background: #fff;
+    box-shadow: 0 4px 2px -2px gray; /* Добавление тени под шапкой */
 }
 
 header .nav-pills {
     margin-left: 20px;
 }
 
+header .nav-item {
+    padding: 0 10px;
+}
 
+/* Добавляем отступы для формы выбора маршрута */
+h1 {
+    margin-bottom: 20px; /* Расстояние от заголовка до следующих элементов */
+}
 
 label {
     font-weight: bold;
@@ -59,12 +67,4 @@ label {
 /* Убираем лишнее расстояние между кнопками */
 .controls-container .control-item {
     margin-right: 10px; /* Меньше промежутков между кнопками */
-}
-
-header .fs-4 {
-    color: black; /* Изменяем цвет заголовка на черный */
-}
-
-.header__img {
-    margin-right: 10px;
 }
