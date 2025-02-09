@@ -2,8 +2,6 @@ import pandas as pd
 import datetime
 import json
 
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
 from openpyxl.chart.series import attribute_mapping
 
 #ВАня ты ЗАЕБАЛ СО СВОИМИ КОМЕНТАМИ
@@ -278,8 +276,6 @@ for Atm in sorted(AtmID):
     else:
         AtmWorkingTimePercent[Atm] = {'Percent': 100}
     AtmWorkingTimePercentPerWeek[('week' + str(weekcounter))]=(DeltaAtmWork)
-    
-make_routes()#делаем маршруты НЕ ТРОГАТЬ
 
 
 with open('static/jsons/AtmWorkingTimePercentWeek.json', 'w', encoding='utf-8') as file:
