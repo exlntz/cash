@@ -134,4 +134,4 @@ def save_json(data, filename):
         json.dump(data, file, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
-    application.run(debug=True)
+    application.run(host='0.0.0.0')
