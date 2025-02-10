@@ -136,8 +136,8 @@ while k<lastcount:
             weekdata[AtmID[k]]=event_type[k]
             firsttime = list(map(int, time[k][0:10].split('-')))
         k+=1
-    key='неделя '+str(week)
-
+    key='week'+str(week)
+#asdasdsadkajdkdjkdjakd
     weekEndData[key]=weekdata
     start_date=datetime.date(firsttime[0],firsttime[1],firsttime[2])
     week+=1
